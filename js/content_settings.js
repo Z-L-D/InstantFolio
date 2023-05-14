@@ -1,5 +1,5 @@
-var site_settings = {   site_title:"InstantSite",
-                        topbar_title:"InstantSIte",
+var site_settings = {   site_title:"InstantFolio",
+                        topbar_title:"InstantFolio",
                         site_subtitle:"",
                         site_description:"",
                         site_section_about:true,

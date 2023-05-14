@@ -1,4 +1,4 @@
-function page_init()
+function tag_init()
 {
     var tags = site_settings.site_tags;
 
@@ -12,7 +12,7 @@ function page_init()
     }
 }
 
-page_init()
+tag_init()
 
 
 
