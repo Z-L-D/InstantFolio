@@ -1,0 +1,60 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway';
+@import 'https://fonts.googleapis.com/css2?family=Raleway:wght@900';
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap';
+
+:root
+{
+    /* ---- MAIN ---- */
+    --default_page_font:Montserrat;
+    --default_section_background:#eee;
+    --default_h1_text_color:black;
+    --default_h1_font:var(--default_page_font);
+    --default_h1_font_size:48px;
+    --default_h1_font_weight:900;
+    --default_h1_punct:rgb(233, 74, 26);
+    
+    /* ---- NAVBAR ---- */
+    --navbar_background:#fff;
+    --navbar_background_hover:rgb(233, 74, 26);
+    --navbar_background_select:var(--navbar_background_hover);
+    --navbar_shadow_size:20px;
+    --navbar_shadow_color:rgba(0, 0, 0, 0.1);
+    --navbar_text_color:black;
+    --navbar_text_color_hover:white;
+
+    /* ---- WELCOME ---- */
+    --welcome_background:var(--default_section_background);
+    --welcome_text_color:black;
+    --welcome_h1_text_color:var(--default_h1_font);
+
+    /* ---- ABOUT ---- */
+    --about_background:var(--default_section_background);
+    --about_h1_text_color:var(--default_h1_font);
+
+    /* ---- PORTFOLIO ---- */
+    --portfolio_background:#333;
+    --portfolio_h1_text_color:white;
+    --portfolio_tags_text_color:white;
+    --item_background:black;
+    --item_text_color:white;
+    --tag_anim_color:rgb(233, 74, 26);
+    --tag_anim_opacity:0.3;
+
+    /* ---- MODAL ---- */
+    --modal_background:white;
+    --modal_text_color:black;
+
+    /* ---- CONTACT ---- */
+    --contact_background:white;
+    --contact_h1_text_color:var(--default_h1_font);
+    --contact_button_background:white;
+    --contact_button_background_hover:var(--contact_textbox_text_color);
+    --contact_button_text_color:white;
+    --contact_button_symbol_color:rgb(233, 74, 26);
+    --contact_textbox_background:var(--default_section_background);
+    --contact_textbox_text_color:#666;
+
+    /* ---- FOOTER ---- */
+    --footer_background:var(--default_section_background);
+}

@@ -1,0 +1,516 @@
+/* topBotomBordersOut
+topBotomBordersIn
+topLeftBorders
+circleBehind
+brackets
+borderYtoX
+borderXwidth
+pullDown
+pullUp
+pullRight
+pullLeft
+pullUpDown
+pullRightLeft 
+outlineOut
+hollow */
+
+/* --------------------------------------- */
+/* Top and Bottom borders go out */
+/* --------------------------------------- */
+item.topBotomBordersOut a:before, 
+item.topBotomBordersOut a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--tag_anim_color);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+item.topBotomBordersOut a:before
+{
+    top: 0px;
+    transform: translateY(10px);
+}
+
+item.topBotomBordersOut a:after
+{
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+item:hover.topBotomBordersOut a:before, 
+item:hover.topBotomBordersOut a:after
+{
+    opacity: var(--tag_anim_opacity);
+    transform: translateY(0px);
+}
+
+/* --------------------------------------- */
+/* Top and Bottom borders come in */
+/* --------------------------------------- */
+item.topBotomBordersIn a:before, 
+item.topBotomBordersIn a:after
+{
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--tag_anim_color);
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+item.topBotomBordersIn a:before
+{
+    top: 0px;
+    transform: translateY(-10px);
+}
+
+item.topBotomBordersIn a:after
+{
+    bottom: 0px;
+    transform: translateY(10px);
+}
+
+item:hover.topBotomBordersIn a:before, 
+item:hover.topBotomBordersIn a:after
+{
+    opacity: var(--tag_anim_opacity);
+    transform: translateY(0px);
+}
+
+/* --------------------------------------- */
+/* Top border go down and Left border appears */
+/* --------------------------------------- */
+item.topLeftBorders a:before
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2px;
+    height: 0px;
+    background: var(--tag_anim_color);
+    content: "";
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item.topLeftBorders a:after
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--tag_anim_color);
+    content: "";
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item:hover.topLeftBorders a:before
+{
+    height: 100%;
+}
+
+item:hover.topLeftBorders a:after
+{
+    opacity: 0;
+    top: 100%;
+}
+
+/* --------------------------------------- */
+/* Circle behind */
+/* --------------------------------------- */
+item.circleBehind a:before, 
+item.circleBehind a:after
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border: 4px solid var(--tag_anim_color);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+    border-radius: 50%;
+    background: transparent;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+    z-index: -1;
+}
+
+item.circleBehind a:after
+{
+    border-width: 2px;
+    transition: all 0.4s;
+}
+
+item:hover.circleBehind a:before
+{
+    opacity: var(--tag_anim_opacity);
+    transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+item:hover.circleBehind a:after
+{
+    opacity: var(--tag_anim_opacity);
+    transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
+/* --------------------------------------- */
+/* Brackets go out */
+/* --------------------------------------- */
+item.brackets a:before, 
+item.brackets a:after
+{
+    position: absolute;
+    opacity: 0;
+    font-size: 1.2vw;
+    top: 5px;
+    transition: all 0.3s;
+    font-weight: 900;
+}
+
+item.brackets a:before
+{
+    content: '(';
+    left: -0.5vw;
+    transform: translateX(10px);
+}
+
+item.brackets a:after
+{
+    content: ')';
+    right: -0.5vw;
+    transform: translateX(-10px);
+}
+
+item:hover.brackets a:before, 
+item:hover.brackets a:after
+{
+    opacity: var(--tag_anim_opacity);
+    transform: translateX(0px);
+}
+
+/* --------------------------------------- */
+/* Border from Y to X  */
+/* --------------------------------------- */
+item.borderYtoX a:before, 
+item.borderYtoX a:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+    width: 2px;
+    content: '';
+    background: var(--tag_anim_color);
+    transition: all 0.3s;
+}
+
+item.borderYtoX a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+item.borderYtoX a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+item:hover.borderYtoX a:before, 
+item:hover.borderYtoX a:after
+{
+    opacity: var(--tag_anim_opacity);
+    height: 2px;
+    width: 100%;
+}
+
+/* --------------------------------------- */
+/* Border X get width  */
+/* --------------------------------------- */
+item.borderXwidth a:before, 
+item.borderXwidth a:after
+{
+    position: absolute;
+    opacity: 0;
+    width: 0%;
+    height: 2px;
+    content: '';
+    background: var(--tag_anim_color);
+    transition: all 0.3s;
+}
+
+item.borderXwidth a:before
+{
+    left: 0px;
+    top: 0px;
+}
+
+item.borderXwidth a:after
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+item:hover.borderXwidth a:before, 
+item:hover.borderXwidth a:after
+{
+    opacity: var(--tag_anim_opacity);
+    width: 100%;
+}
+
+/* --------------------------------------- */
+/* Pull down  */
+/* --------------------------------------- */
+item.pullDown a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: var(--tag_anim_color);
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item:hover.pullDown a:before
+{
+    height: 100%;
+}
+
+/* --------------------------------------- */
+/* Pull up  */
+/* --------------------------------------- */
+item.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: var(--tag_anim_color);
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item:hover.pullUp a:before
+{
+    height: 100%;
+}
+
+/* --------------------------------------- */
+/* Pull right  */
+/* --------------------------------------- */
+item.pullRight a:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: var(--tag_anim_color);
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item:hover.pullRight a:before
+{
+    width: 100%;
+}
+
+/* --------------------------------------- */
+/* Pull left  */
+/* --------------------------------------- */
+item.pullLeft a:before
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    content: '';
+    background: var(--tag_anim_color);
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item:hover.pullLeft a:before
+{
+    width: 100%;
+}
+
+/* --------------------------------------- */
+/* Pull up and down  */
+/* --------------------------------------- */
+item.pullUpDown a:before, 
+item.pullUpDown a:after
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    content: '';
+    background: var(--tag_anim_color);
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item.pullUpDown a:before
+{
+    top: 0px;
+} 
+
+item.pullUpDown a:after
+{
+    bottom: 0px;
+}
+
+item:hover.pullUpDown a:before, 
+item:hover.pullUpDown a:after
+{
+    height: 100%;
+}
+
+/* --------------------------------------- */
+/* Pull right and left  */
+/* --------------------------------------- */
+item.pullRightLeft a:before, 
+item.pullRightLeft a:after
+{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    top: 0px;
+    content: '';
+    background: var(--tag_anim_color);
+    opacity: var(--tag_anim_opacity);
+    transition: all 0.3s;
+}
+
+item.pullRightLeft a:before
+{
+    left: 0px;
+} 
+
+item.pullRightLeft a:after
+{
+    right: 0px;
+}
+
+item:hover.pullRightLeft a:before, 
+item:hover.pullRightLeft a:after
+{
+    width: 100%;
+}
+
+/* --------------------------------------- */
+/* Outline Out */
+/* --------------------------------------- */
+item.outlineOut:before{
+	content: "";
+	border:2px solid var(--tag_anim_color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+item:hover.outlineOut:before{
+	top: -0.5vh;
+	left: -0.5vw;
+	right: -0.5vw;
+	bottom: -0.5vh;
+}
+
+/* --------------------------------------- */
+/* Hollow */
+/* --------------------------------------- */
+item.hollow:before{
+	content: "";
+	border:2px solid var(--tag_anim_color);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+    bottom: 0;
+    transition: all 0.3s;
+}
+item.hollow{
+    background-color: var(--tag_anim_color);
+    transition: all 0.3s;
+}
+item:hover.hollow{
+	background-color: white;
+}
+
+/* --------------------------------------- */
+/* Zoom Corners
+/* --------------------------------------- */
+.zoom-corners::before, 
+.zoom-corners::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-color: #00edff;
+    border-style: solid;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.zoom-corners.bottom-corners::before {
+  border-width: 0 0 1px 1px;
+  left: 25px;
+  bottom: 25px;
+}
+
+.zoom-corners.bottom-corners::after {
+  border-width: 0 1px 1px 0;
+  right: 25px;
+  bottom: 25px;
+}
+
+.zoom-corners.top-corners::before {
+  border-width: 1px 0 0 1px;
+  left: 25px;
+  top: 25px;
+}
+
+.zoom-corners.top-corners::after {
+  border-width: 1px 1px 0 0;
+  right: 25px;
+  top: 25px;
+}
+
+item:hover .zoom-corners.top-corners::before{
+  top: 0px;
+  left: 0px;
+}
+item:hover .zoom-corners.top-corners::after{
+  top: 0px;
+  right: 0px;
+}
+item:hover .zoom-corners.bottom-corners::before{
+  bottom: 0px;
+  left: 0px;
+}
+item:hover .zoom-corners.bottom-corners::after{
+  bottom: 0px;
+  right: 0px;
+}
