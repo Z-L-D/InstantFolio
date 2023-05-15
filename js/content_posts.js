@@ -35,7 +35,7 @@
 //               }              
 //post_array.push(post_##);
 
-var post_array = [];
+
 
 var post_x = {post_type:"",
                post_subtype:"",
@@ -107,7 +107,7 @@ var post_0 = {post_type:"secb",
 //                share:"y",
 //                license:"CC CC-C MIT CR "
               }              
-post_array.push(post_0);
+// post_array.push(post_0);
 
 var post_1 = {post_type:"blog",
                post_subtype:"",
@@ -143,4 +143,23 @@ var post_1 = {post_type:"blog",
 //                share:"y",
 //                license:"CC CC-C MIT CR "
               }              
-post_array.push(post_1);
+// post_array.push(post_1);
+
+const post_array = [
+    {
+        post_type:"tag1",
+        post_subtype:"tag1_subtag1",
+        post_title:"Electronic Music Playlist",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+    {
+        post_type:"blog",
+        post_subtype:"",
+        post_title:"Blog 1",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+];

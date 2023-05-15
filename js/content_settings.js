@@ -40,6 +40,6 @@ var site_settings = {   site_title:"InstantFolio",
                         site_tag_animation:"pullUpDown",
                         site_blog:false,
                         site_downloads:false,
-                        site_tags:['secb', 'blog'],
+                        site_tags:[['tag1', 'tag1_subtag1'], ['tag2']],
                         site_subtags_0:['seca'],
                     };

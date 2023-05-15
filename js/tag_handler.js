@@ -1,50 +1,10 @@
-function tag_init()
-{
-    var tags = site_settings.site_tags;
-
-    for (i = 0; i < tags.length; i++) 
-    {
-        var subtags = eval("site_settings.site_subtags_" + i);
-        if(subtags != undefined)
-        {
-            tags_set_group_state(`${tags[i]}_nav`, false);
-        }
-    }
-}
-
-tag_init()
-
-
-
-function tags_set_group_state(group_name, state)
-{
-    var group = document.getElementsByClassName(group_name);
-
-    if(state == true)
-    {
-        for(var i=0, len=group.length; i<len; i++)
-        {
-            group[i].style["display"] = "block";
-        }
-    }
-    else
-    {        
-        for(var i=0, len=group.length; i<len; i++)
-        {
-            group[i].style["display"] = "none";
-        }
-    }
-}
-
-
-
 function categories_create(nav_group)
 {
     var categories = [];
 
     if(nav_group === "main")
     {
-        categories = site_settings.site_tags;
+        categories = tags;
 
         if(site_settings.site_blog == true)
         {
@@ -64,7 +24,7 @@ function categories_create(nav_group)
     }
     else
     {
-        var index = site_settings.site_tags.indexOf(nav_group);
+        var index = tags.indexOf(nav_group);
 
         categories = eval("site_settings.site_subtags_" + index);
     }
@@ -75,8 +35,6 @@ function categories_create(nav_group)
 
 function tags_set_group(nav_group, group_name)
 {
-    var tags = site_settings.site_tags;
-
     categories = categories_create(nav_group)
 
     if(nav_group === "main")
