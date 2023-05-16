@@ -49,7 +49,7 @@ tag_init();
 //     }
 // }
 
-var post_types = ['all']
+var post_types = ['all', ['tag_temp', 'subtag_tem']]
 
 function load_work()
 {
@@ -85,32 +85,58 @@ function load_work()
     //     `);
     // }
     
-    post_types = ['tag1', ['tag2', 'tag2_subtag1'], 'tag3']
+    // post_types = ['tag1', ['tag2', 'tag2_subtag1'], 'tag3']
 
     // console.log(post_types.includes('tag2'));
 
     for(let i = 0; i < post_array.length; i++){
-        console.log(`current evaluating tag: ${post_array[i].post_type}`)
-        if(Array.isArray(post_types[i])){
-            if(post_types[i].includes(post_array[i].post_type) === false){
-                console.log(`added ${post_array[i].post_type} to subarray`)
+        // console.log(`current evaluating tag: ${post_array[i].post_type}`)
+        if(post_array[i].post_subtype != ""){
+            for(let j = 0; j < post_types.length; j++){
+                if(Array.isArray(post_types[j]) === true){
+                    console.log(`is array at index ${i}`)
+                    if(post_types[j].includes(post_array[i].post_type) === false){
+                        // post_types.push([post_array[i].post_type, post_array[i].post_subtype])
+                        console.log(`tag not found within index ${i}`)
+                    }
+                    else{
+                        console.log(`tag found within index ${i}`)
+                    }
+                }
+                else{
+                    // post_types.push([post_array[i].post_type, post_array[i].post_subtype])
+                }
+            //     else if(Array.isArray(post_types[j]) === true){
+            //         post_types.push([post_array[i].post_type, post_array[i].post_subtype])
+            //     }
             }
-            else{
-                console.log(`item already exists in subarray`)
-            }
+            // post_types.push([post_array[i].post_type, post_array[i].post_subtype])
         }
         else{
             if(post_types.includes(post_array[i].post_type) === false){
-                console.log(`added ${post_array[i].post_type} to array`)
-            }
-            else{
-                console.log('item already exists in array')
+                post_types.push(post_array[i].post_type);
             }
         }
+
+        // if(Array.isArray(post_types[i])){
+        //     if(post_types[i].includes(post_array[i].post_type) === false){
+        //         console.log(`added ${post_array[i].post_type} to subarray`)
+        //     }
+        //     else{
+        //         console.log(`item already exists in subarray`)
+        //     }
+        // }
+        // else{
+        //     if(post_types.includes(post_array[i].post_type) === false){
+        //         console.log(`added ${post_array[i].post_type} to array`)
+        //     }
+        //     else{
+        //         console.log('item already exists in array')
+        //     }
+        // }
     }
 
     console.log(post_types);
-
 
 };
 load_work();

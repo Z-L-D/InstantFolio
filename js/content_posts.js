@@ -155,7 +155,7 @@ const post_array = [
         post_image:""
     },
     {
-        post_type:"blog",
+        post_type:"tag2",
         post_subtype:"",
         post_title:"Blog 1",
         post_description:"",
@@ -163,16 +163,48 @@ const post_array = [
         post_image:""
     },
     {
-        post_type:"tag1",
-        post_subtype:"tag1_subtag1",
+        post_type:"tag2",
+        post_subtype:"",
+        post_title:"Blog 1",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+    {
+        post_type:"tag3",
+        post_subtype:"tag3_subtag1",
         post_title:"Electronic Music Playlist",
         post_description:"",
         post_date:"",
         post_image:""
     },
     {
-        post_type:"blog",
+        post_type:"blog1",
         post_subtype:"",
+        post_title:"Blog 1",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+    {
+        post_type:"blog2",
+        post_subtype:"tech",
+        post_title:"Blog 1",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+    {
+        post_type:"blog2",
+        post_subtype:"tech",
+        post_title:"Blog 1",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+    {
+        post_type:"blog2",
+        post_subtype:"science",
         post_title:"Blog 1",
         post_description:"",
         post_date:"",
