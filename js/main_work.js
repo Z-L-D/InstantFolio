@@ -87,7 +87,27 @@ function load_work()
     
     post_types = ['tag1', ['tag2', 'tag2_subtag1'], 'tag3']
 
-    console.log(post_types.includes('tag2'));
+    // console.log(post_types.includes('tag2'));
+
+    for(let i = 0; i < post_array.length; i++){
+        console.log(`current evaluating tag: ${post_array[i].post_type}`)
+        if(Array.isArray(post_types[i])){
+            if(post_types[i].includes(post_array[i].post_type) === false){
+                console.log(`added ${post_array[i].post_type} to subarray`)
+            }
+            else{
+                console.log(`item already exists in subarray`)
+            }
+        }
+        else{
+            if(post_types.includes(post_array[i].post_type) === false){
+                console.log(`added ${post_array[i].post_type} to array`)
+            }
+            else{
+                console.log('item already exists in array')
+            }
+        }
+    }
 
     console.log(post_types);
 
