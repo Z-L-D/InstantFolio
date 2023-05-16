@@ -162,4 +162,20 @@ const post_array = [
         post_date:"",
         post_image:""
     },
+    {
+        post_type:"tag1",
+        post_subtype:"tag1_subtag1",
+        post_title:"Electronic Music Playlist",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
+    {
+        post_type:"blog",
+        post_subtype:"",
+        post_title:"Blog 1",
+        post_description:"",
+        post_date:"",
+        post_image:""
+    },
 ];
