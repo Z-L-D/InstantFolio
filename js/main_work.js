@@ -1,32 +1,32 @@
-function tag_init()
-{
-    // for (let i = 0; i < tags.length; i++) 
-    // {
-    //     var subtags = eval("site_settings.site_subtags_" + i);
-    //     if(subtags != undefined)
-    //     {
-    //         tags_set_group_state(`${tags[i]}_nav`, false);
-    //     }
-    // }
-    // console.log(site_settings.site_subtags_0)
+// function tag_init()
+// {
+//     // for (let i = 0; i < tags.length; i++) 
+//     // {
+//     //     var subtags = eval("site_settings.site_subtags_" + i);
+//     //     if(subtags != undefined)
+//     //     {
+//     //         tags_set_group_state(`${tags[i]}_nav`, false);
+//     //     }
+//     // }
+//     // console.log(site_settings.site_subtags_0)
     
-    for(let i = 0; i < tags.length; i++){
-        if(tags[i].length === 1){
-            console.log(`tag ${i}: ${tags[i]}`)
-        }
-        else if(tags[i].length > 1){
-            for(let j = 0; j < tags[i].length; j++){
-                if(j === 0){
-                    console.log(`tag ${i}: ${tags[i][0]}`)
-                }
-                else{
-                    console.log(`tag ${i}--subtag ${j}: ${tags[i][j]}`)
-                }
-            }
-        }
-    }
-}
-tag_init();
+//     for(let i = 0; i < tags.length; i++){
+//         if(tags[i].length === 1){
+//             console.log(`tag ${i}: ${tags[i]}`)
+//         }
+//         else if(tags[i].length > 1){
+//             for(let j = 0; j < tags[i].length; j++){
+//                 if(j === 0){
+//                     console.log(`tag ${i}: ${tags[i][0]}`)
+//                 }
+//                 else{
+//                     console.log(`tag ${i}--subtag ${j}: ${tags[i][j]}`)
+//                 }
+//             }
+//         }
+//     }
+// }
+// tag_init();
 
 
 // function tags_set_group_state(group_name, state)
@@ -51,7 +51,46 @@ tag_init();
 
 // var post_types = ['all', ['tag_temp', 'subtag_temp']]
 
-function load_work()
+function load_tags(){
+    let post_types = ['All']
+
+    for(let i = 0; i < post_array.length; i++){
+        if(post_types.includes(post_array[i].post_type) === false){
+            post_types.push(post_array[i].post_type);
+        }
+    }
+
+    for(let i = 0; i < post_types.length; i++){
+        document.getElementById("tags").insertAdjacentHTML('beforeend', `
+            <item class="item tag ${tag_animation}" data="${post_types[i]}"><a>${post_types[i].toUpperCase()}</a></item>
+        `);
+    }
+}
+load_tags();
+
+
+function init_tags(){
+    const buttons_tags = document.querySelectorAll('.tag');
+    for(let i = 0; i < buttons_tags.length; i++){
+        buttons_tags[i].addEventListener('click', function(){
+            let get_data = buttons_tags[i].getAttribute("data")
+            get_data = get_data.toLowerCase()
+            get_tag_group = document.querySelectorAll(`.${get_data}`)
+            if(get_data === "all"){
+                alert("show all")
+            }
+            else{
+                for(let j = 0; j < get_tag_group.length; j++){
+                    get_tag_group[j].style.display = "none"
+                }
+            }
+        })
+    }
+}
+init_tags();
+
+
+function load_items()
 {
     for(let i = 0; i < post_array.length; i++){
         document.getElementById("posts").insertAdjacentHTML('beforeend', `
@@ -66,26 +105,5 @@ function load_work()
                 </div>
         `);
     }
-
-    let post_types = ['all']
-
-    for(let i = 0; i < post_array.length; i++){
-        if(post_types.includes(post_array[i].post_type) === false){
-            post_types.push(post_array[i].post_type);
-            console.log(`post_array index ${i} type does not exist current in post_types array, adding to array`)
-        }
-        else{
-            console.log(`post_array index ${i} type already exists in current in post_types array, ignoring`)
-        }
-    }
-
-    console.log(post_types)
-
-    for(let i = 0; i < post_types.length; i++){
-        document.getElementById("tags").insertAdjacentHTML('beforeend', `
-            <item class="item ${tag_animation}"><a>${post_types[i].toUpperCase()}</a></item>
-        `);
-    }
-
 };
-load_work();
+load_items();
