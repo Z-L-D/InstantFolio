@@ -80,14 +80,40 @@ function init_tags(){
                 alert("show all")
             }
             else{
-                for(let j = 0; j < get_tag_group.length; j++){
-                    get_tag_group[j].style.display = "none"
-                }
+                // for(let j = 0; j < get_tag_group.length; j++){
+                //     get_tag_group[j].style.display = "none"
+                // }
+                load_subtags(get_data)
             }
         })
     }
 }
 init_tags();
+
+
+function load_subtags(tag){
+    alert(`load subtags for tag: ${tag}`);
+
+    let post_subtypes = ['All']
+
+    for(let i = 0; i < post_array.length; i++){
+        if(post_array[i].post_type === tag){
+            if(post_subtypes.includes(post_array[i].post_subtype) === false){
+                post_subtypes.push(post_array[i].post_subtype);
+            }
+        }
+    }
+
+    document.getElementById("subtags").innerHTML = "";
+
+    console.log(post_subtypes)
+
+    for(let i = 0; i < post_subtypes.length; i++){
+        document.getElementById("subtags").insertAdjacentHTML('beforeend', `
+            <item class="item tag ${tag_animation}" data="${post_subtypes[i]}"><a>${post_subtypes[i].toUpperCase()}</a></item>
+        `);
+    }
+}
 
 
 function load_items()
