@@ -12,4 +12,9 @@ function load_settings()
         document.getElementById("site_title").innerHTML = site_settings.site_title;
     }
 }
+
+
+
+// PAGE INIT
 load_settings();
+load_work();
