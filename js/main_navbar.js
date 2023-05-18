@@ -112,11 +112,11 @@ function viewport_return(section_return)
 get_sections();
 navbar_monitor();
 
-document.addEventListener('scroll', function(e){
+document.addEventListener('scroll', function(){
     navbar_monitor();
 });
 
-window.addEventListener('resize', function(e){
+window.addEventListener('resize', function(){
     section_return = viewport_reset();
     get_sections();
     viewport_return(section_return);
