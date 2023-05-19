@@ -1,4 +1,4 @@
-function modal_load(post_number)
+function load_modal(post_number)
 {
     document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
             MODAL MODAL MODAL MODAL MODAL MODAL
