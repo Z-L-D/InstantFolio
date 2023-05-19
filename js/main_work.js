@@ -26,7 +26,7 @@ function load_work(){
     //load tags
     for(let i = 0; i < post_types.length; i++){
         document.getElementById("tags").insertAdjacentHTML('beforeend', `
-            <a class="item tag ${tag_animation}" data="${post_types[i]}"><div>${post_types[i].toUpperCase()}</div></a>
+            <a class="item tag ${tag_animation}" type="${post_types[i]}"><div>${post_types[i].toUpperCase()}</div></a>
         `);
     };
 
@@ -34,10 +34,10 @@ function load_work(){
     const buttons_tags = document.querySelectorAll('.tag');
     for(let i = 0; i < buttons_tags.length; i++){
         buttons_tags[i].addEventListener('click', function(){
-            let get_data = buttons_tags[i].getAttribute("data");
-            get_data = get_data.toLowerCase();
-            get_tag_group = document.querySelectorAll(`.${get_data}`);
-            load_subtags(get_data);
+            let get_type = buttons_tags[i].getAttribute("type");
+            get_type = get_type.toLowerCase();
+            load_subtags(get_type);
+            handler_tags(get_type);
         });
     };
 
@@ -84,16 +84,52 @@ function load_subtags(tag){
     else{
         for(let i = 0; i < post_subtypes.length; i++){
             document.getElementById("subtags").insertAdjacentHTML('beforeend', `
-                <a class="item tag ${tag_animation}" data="${post_subtypes[i]}"><a>${post_subtypes[i].toUpperCase()}</a></a>
+                <a class="item subtag ${tag_animation}" subtype="${post_subtypes[i]}"><div>${post_subtypes[i].toUpperCase()}</div></a>
             `);
         };
+    };
+
+    //init subtag buttons
+    const buttons_subtags = document.querySelectorAll('.subtag');
+    for(let i = 0; i < buttons_subtags.length; i++){
+        buttons_subtags[i].addEventListener('click', function(){
+            let get_subtype = buttons_subtags[i].getAttribute("subtype");
+            get_subtype = get_subtype.toLowerCase();
+            handler_tags(tag, get_subtype);
+        });
     };
 };
 
 function handler_tags(type, subtype){
     get_posts = document.querySelectorAll('.post')
 
-    for(let i = 0; i < get_posts.length; i++){
-        // if()
+    if(subtype === undefined){
+        if(type === "all"){
+            
+            for(let i = 0; i < get_posts.length; i++){
+                get_posts[i].style.display = "block";
+            }
+        }
+        else{
+            for(let i = 0; i < get_posts.length; i++){
+                let get_type = get_posts[i].getAttribute("type");
+                get_type = get_type.toLowerCase();
+                if(get_type != type){
+                    get_posts[i].style.display = "none";
+                }
+                else{
+                    get_posts[i].style.display = "block";
+                }
+            }
+        }
     }
+    else{
+        console.log(subtype)
+    }
+
+    // console.log(type);
+
+    // for(let i = 0; i < get_posts.length; i++){
+    //     // if()
+    // }
 }
