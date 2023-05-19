@@ -11,7 +11,7 @@ function load_work(){
         //load posts
         post_file = post_array[i].post_title.replace(/ /g, "_");
         document.getElementById("posts").insertAdjacentHTML('beforeend', `
-                <a class="item post ${post_array[i].post_type} ${post_array[i].post_subtype}" data="${post_file}" index="${i}">
+                <a class="item post ${post_array[i].post_type} ${post_array[i].post_subtype}" data="${post_file}" index="${i}" type="${post_array[i].post_type}" subtype="${post_array[i].post_subtype}">
                     <div class="card">
                         <div class="card_background" style="background-image: url('img/${post_array[i].post_type}/${post_array[i].post_title}/${post_array[i].post_title}--th.jpg')"></div>
                         <div class="text">
@@ -89,3 +89,11 @@ function load_subtags(tag){
         };
     };
 };
+
+function handler_tags(type, subtype){
+    get_posts = document.querySelectorAll('.post')
+
+    for(let i = 0; i < get_posts.length; i++){
+        // if()
+    }
+}
