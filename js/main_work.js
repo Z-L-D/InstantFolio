@@ -104,11 +104,10 @@ function handler_tags(type, subtype){
     get_posts = document.querySelectorAll('.post')
 
     if(subtype === undefined){
-        if(type === "all"){
-            
+        if(type === "all"){ 
             for(let i = 0; i < get_posts.length; i++){
                 get_posts[i].style.display = "block";
-            }
+            };
         }
         else{
             for(let i = 0; i < get_posts.length; i++){
@@ -119,17 +118,39 @@ function handler_tags(type, subtype){
                 }
                 else{
                     get_posts[i].style.display = "block";
-                }
-            }
-        }
+                };
+            };
+        };
     }
     else{
-        console.log(subtype)
-    }
+        if(subtype === "all"){ 
+            for(let i = 0; i < get_posts.length; i++){
+                let get_type = get_posts[i].getAttribute("type");
+                get_type = get_type.toLowerCase();
 
-    // console.log(type);
+                if(get_type != type){
+                    get_posts[i].style.display = "none";
+                }
+                else{
+                    get_posts[i].style.display = "block";
+                };
+            };
+        }
+        else{
+            for(let i = 0; i < get_posts.length; i++){
+                let get_type = get_posts[i].getAttribute("type");
+                get_type = get_type.toLowerCase();
 
-    // for(let i = 0; i < get_posts.length; i++){
-    //     // if()
-    // }
-}
+                let get_subtype = get_posts[i].getAttribute("subtype");
+                get_subtype = get_subtype.toLowerCase();
+
+                if(get_subtype != subtype){
+                    get_posts[i].style.display = "none";
+                }
+                else{
+                    get_posts[i].style.display = "block";
+                };
+            };
+        };
+    };
+};
