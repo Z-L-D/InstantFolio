@@ -56,12 +56,13 @@
                         color: var(--default_h1_punctuation);
                     }
 
-            .section
+            section
             {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
+                min-height: 100svh;
                 min-height: 100vh;
                 position: relative;
                 text-align: center;
@@ -76,30 +77,29 @@
             
         </style>
 
-        <section id="navbar" class="navbar_bottom">
+        <div id="navbar" class="navbar_bottom">
             <a id="tab_welcome" class="item" href="#section_welcome">HOME</a>
             <a id="tab_about" class="item" href="#section_about">ABOUT</a>
             <a id="tab_work" class="item" href="#section_work">WORK</a>
             <a id="tab_contact" class="item" href="#section_contact">CONTACT</a>
-        </section>
+        </div>
 
 
         <style>
-            .welcome
+            #landing
             {
-                opacity: 1;
                 background-color: var(--welcome_background);
                 color: var(--welcome_text_color);
             }
 
-                    .welcome
+                    #landing
                     h1
                     {
                         color:var(--welcome_h1_text_color);
                     }
         </style>
         
-        <section id="section_welcome" class="section welcome">
+        <section id="section_welcome" class="landing">
             <h1>WELCOME</h1>
         </section>
 
@@ -107,7 +107,6 @@
         <style>
             .about
         {
-            opacity: 1;
             background-color: var(--about_background);
         }
 
@@ -118,7 +117,7 @@
                 }
         </style>
 
-        <section id="section_about" class="section about">
+        <section id="section_about" class="about">
             <h1>ABOUT</h1>
         </section>
 
@@ -126,11 +125,10 @@
         <style>
             .portfolio
             {
-                opacity: 1;
                 justify-content: unset;
                 background-color: var(--portfolio_background);
             }
-            
+
                     .portfolio
                     h1
                     {
@@ -353,7 +351,7 @@
                     }
         </style>
 
-        <section id="section_work" class="section portfolio">
+        <section id="section_work" class="portfolio">
             <h1>WORK</h1>
             <div id="tags" class="tags"><!--generated--></div>
             <div id="subtags"><!--generated--></div>
@@ -368,7 +366,6 @@
         <style>
             .contact
             {
-                opacity: 1;
                 background-color: var(--contact_background);
                 color:var(--contact_h1_text_color);
                 justify-content: unset;
@@ -516,7 +513,7 @@
                                                             }
         </style>
 
-        <section id="section_contact" class="section contact">
+        <section id="section_contact" class="contact">
             <h1>CONTACT</h1>
             <columns class="columns">
                 <col_one class="col_one">
