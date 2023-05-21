@@ -58,14 +58,10 @@
             {
                 display: flex;
                 flex-direction: row;
-                position: absolute;
-                bottom: 0px;
-                /* position: sticky; */
-                /* top: 0; */
-                /* bottom: 0px; */
                 width: 100%;
                 height: 70px;
                 z-index: 10;
+                background-color: #ffffff;
                 box-shadow: 0 0 var(--navbar_shadow_size) var(--navbar_shadow_color);
             }
 
@@ -73,11 +69,6 @@
                     a
                     {
                         text-decoration: none;
-                    }
-
-                    #navbar
-                    .tab
-                    {
                         display: flex;
                         justify-content: center;
                         align-items: center;
@@ -85,12 +76,20 @@
                         letter-spacing: 0.1rem;
                         transition: all 0.5s ease;
                         font-size: 0.8rem;
+                    }
+
+
+
+                    #navbar
+                    .item
+                    {
+                        
                         color: var(--navbar_text_color);
                         background-color: var(--navbar_background);
                     }
 
                             #navbar
-                            .tab:hover
+                            .item:hover
                             {
                                 transition: all 0.3s ease;
                                 color: var(--navbar_text_color_hover);
@@ -98,21 +97,14 @@
                             }
 
                     #navbar
-                    .tab_select
+                    .item_select
                     {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex: 1;
-                        letter-spacing: 0.1rem;
-                        transition: all 0.5s ease;
-                        font-size: 0.8rem;
                         color: var(--navbar_text_color_hover);
                         background-color: var(--navbar_background_select);
                     }
 
                             #navbar
-                            .tab_select:hover
+                            .item_select:hover
                             {
                                 transition: all 0.3s ease;
                                 color: var(--navbar_text_color_hover);
@@ -120,18 +112,23 @@
                             }
 
                         
-            .navbar_sticky_top
+            .navbar_bottom{
+                position: absolute;
+                bottom: 0px;
+            }   
+
+            .navbar_top
             {
                 position: sticky;
                 top: 0px;
             }
         </style>
 
-        <section id="navbar">
-            <a id="tab_welcome" class="tab" href="#section_welcome">HOME</a>
-            <a id="tab_about" class="tab" href="#section_about">ABOUT</a>
-            <a id="tab_work" class="tab" href="#section_work">WORK</a>
-            <a id="tab_contact" class="tab" href="#section_contact">CONTACT</a>
+        <section id="navbar" class="navbar_bottom">
+            <a id="tab_welcome" class="item" href="#section_welcome">HOME</a>
+            <a id="tab_about" class="item" href="#section_about">ABOUT</a>
+            <a id="tab_work" class="item" href="#section_work">WORK</a>
+            <a id="tab_contact" class="item" href="#section_contact">CONTACT</a>
         </section>
 
         

@@ -26,47 +26,47 @@ function navbar_monitor()
 {    
     if(window.scrollY > height_window)
     {
-        document.getElementById('navbar').classList.add('navbar_sticky_top');
-        document.getElementById('tab_welcome').classList.replace('tab_select', 'tab');
+        document.getElementById('navbar').classList.replace('navbar_bottom', 'navbar_top');
+        document.getElementById('tab_welcome').classList.replace('item_select', 'item');
         // current_section = "welcome"
     }
     else
     {
-        document.getElementById('navbar').classList.remove('navbar_sticky_top');
-        document.getElementById('tab_welcome').classList.replace('tab', 'tab_select');
+        document.getElementById('navbar').classList.replace('navbar_top', 'navbar_bottom');
+        document.getElementById('tab_welcome').classList.replace('item', 'item_select');
     }
 
 
     if(window.scrollY > height_about && window.scrollY < height_work)
     {
-        document.getElementById('tab_about').classList.replace('tab', 'tab_select');
+        document.getElementById('tab_about').classList.replace('item', 'item_select');
         current_section = "about"
     }
     else
     {
-        document.getElementById('tab_about').classList.replace('tab_select', 'tab');
+        document.getElementById('tab_about').classList.replace('item_select', 'item');
     }
 
 
     if(window.scrollY > height_work && window.scrollY < height_contact)
     {
-        document.getElementById('tab_work').classList.replace('tab', 'tab_select');
+        document.getElementById('tab_work').classList.replace('item', 'item_select');
         current_section = "work"
     }
     else
     {
-        document.getElementById('tab_work').classList.replace('tab_select', 'tab');
+        document.getElementById('tab_work').classList.replace('item_select', 'item');
     }
 
 
     if(window.scrollY > height_contact)
     {
-        document.getElementById('tab_contact').classList.replace('tab', 'tab_select');
+        document.getElementById('tab_contact').classList.replace('item', 'item_select');
         current_section = "contact"
     }
     else
     {
-        document.getElementById('tab_contact').classList.replace('tab_select', 'tab');
+        document.getElementById('tab_contact').classList.replace('item_select', 'item');
     }
 
 
