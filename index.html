@@ -29,16 +29,109 @@
     <!-- ******************** BODY ******************* -->
     <!-- ............................................. -->
     <body>
-        <header class="header">
-        </header>
+        
+        <style>
+            body
+            {
+                padding: 0px;
+                margin: 0px;
+                font-family: var(--default_page_font);
+            }
 
-        <section class="navbar_tabs">
-            <div id="tabs_container" class="tabs_container">
-                <a id="tab_welcome" class="tab" href="#section_welcome">HOME</a>
-                <a id="tab_about" class="tab" href="#section_about">ABOUT</a>
-                <a id="tab_work" class="tab" href="#section_work">WORK</a>
-                <a id="tab_contact" class="tab" href="#section_contact">CONTACT</a>
-            </div>
+            h1
+            {
+                color: var(--default_h1_text_color);
+                font-family: var(--default_h1_font);
+                font-weight: var(--default_h1_font_weight);
+                font-size: var(--default_h1_font_size);
+            }
+
+                    h1::after
+                    {
+                        content: '.';
+                        color: var(--default_h1_punctuation);
+                    }
+        </style>
+
+        <style>
+            #navbar
+            {
+                display: flex;
+                flex-direction: row;
+                position: absolute;
+                bottom: 0px;
+                /* position: sticky; */
+                /* top: 0; */
+                /* bottom: 0px; */
+                width: 100%;
+                height: 70px;
+                z-index: 10;
+                box-shadow: 0 0 var(--navbar_shadow_size) var(--navbar_shadow_color);
+            }
+
+                    #navbar
+                    a
+                    {
+                        text-decoration: none;
+                    }
+
+                    #navbar
+                    .tab
+                    {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1;
+                        letter-spacing: 0.1rem;
+                        transition: all 0.5s ease;
+                        font-size: 0.8rem;
+                        color: var(--navbar_text_color);
+                        background-color: var(--navbar_background);
+                    }
+
+                            #navbar
+                            .tab:hover
+                            {
+                                transition: all 0.3s ease;
+                                color: var(--navbar_text_color_hover);
+                                background: var(--navbar_background_hover);
+                            }
+
+                    #navbar
+                    .tab_select
+                    {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex: 1;
+                        letter-spacing: 0.1rem;
+                        transition: all 0.5s ease;
+                        font-size: 0.8rem;
+                        color: var(--navbar_text_color_hover);
+                        background-color: var(--navbar_background_select);
+                    }
+
+                            #navbar
+                            .tab_select:hover
+                            {
+                                transition: all 0.3s ease;
+                                color: var(--navbar_text_color_hover);
+                                background: var(--navbar_background_hover);
+                            }
+
+                        
+            .navbar_sticky_top
+            {
+                position: sticky;
+                top: 0px;
+            }
+        </style>
+
+        <section id="navbar">
+            <a id="tab_welcome" class="tab" href="#section_welcome">HOME</a>
+            <a id="tab_about" class="tab" href="#section_about">ABOUT</a>
+            <a id="tab_work" class="tab" href="#section_work">WORK</a>
+            <a id="tab_contact" class="tab" href="#section_contact">CONTACT</a>
         </section>
 
         

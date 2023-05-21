@@ -1,109 +1,5 @@
-body
-{
-    padding: 0px;
-    margin: 0px;
-    font-family: var(--default_page_font);
-}
 
-h1
-{
-    color: var(--default_h1_text_color);
-    font-family: var(--default_h1_font);
-    font-weight: var(--default_h1_font_weight);
-    font-size: var(--default_h1_font_size);
-}
 
-        h1::after
-        {
-            content: '.';
-            color: var(--default_h1_punct);
-        }
-
-.header
-{
-    opacity: 1;
-}
-
-.navbar_tabs
-{
-    opacity: 1;
-}
-
-        .navbar_tabs
-        a
-        {
-            text-decoration: none;
-        }
-
-        .navbar_tabs
-        .tabs_container
-        {
-            display: flex;
-            flex-direction: row;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-            height: 70px;
-            z-index: 10;
-            box-shadow: 0 0 var(--navbar_shadow_size) var(--navbar_shadow_color);
-        }
-
-                .navbar_tabs
-                .tabs_container
-                .tab
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex: 1;
-                    letter-spacing: 0.1rem;
-                    transition: all 0.5s ease;
-                    font-size: 0.8rem;
-                    color: var(--navbar_text_color);
-                    background-color: var(--navbar_background);
-                }
-
-                        .navbar_tabs
-                        .tabs_container
-                        .tab:hover
-                        {
-                            transition: all 0.3s ease;
-                            color: var(--navbar_text_color_hover);
-                            background: var(--navbar_background_hover);
-                        }
-
-                .navbar_tabs
-                .tabs_container
-                .tab_select
-                {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    flex: 1;
-                    letter-spacing: 0.1rem;
-                    transition: all 0.5s ease;
-                    font-size: 0.8rem;
-                    color: var(--navbar_text_color_hover);
-                    background-color: var(--navbar_background_select);
-                }
-
-                        .navbar_tabs
-                        .tabs_container
-                        .tab_select:hover
-                        {
-                            transition: all 0.3s ease;
-                            color: var(--navbar_text_color_hover);
-                            background: var(--navbar_background_hover);
-                        }
-
-                
-
-        .navbar_tabs
-        .tabs_container__top
-        {
-            position: fixed;
-            top: 0;
-        }
 
 .section
 {
@@ -196,7 +92,7 @@ h1
             justify-content: center;
             max-width: 75vw;
             position: relative;
-            flex-direction: row-reverse;
+            flex-direction: row;
         }
 
                 .portfolio

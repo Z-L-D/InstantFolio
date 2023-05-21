@@ -5,14 +5,14 @@
 
 :root
 {
-    /* ---- MAIN ---- */
+    /* ---- GLOBAL ---- */
     --default_page_font:Montserrat;
     --default_section_background:#eee;
     --default_h1_text_color:black;
     --default_h1_font:var(--default_page_font);
     --default_h1_font_size:48px;
     --default_h1_font_weight:900;
-    --default_h1_punct:rgb(233, 74, 26);
+    --default_h1_punctuation:rgb(233, 74, 26);
     
     /* ---- NAVBAR ---- */
     --navbar_background:#fff;
@@ -23,7 +23,7 @@
     --navbar_text_color:black;
     --navbar_text_color_hover:white;
 
-    /* ---- WELCOME ---- */
+    /* ---- LANDING ---- */
     --welcome_background:var(--default_section_background);
     --welcome_text_color:black;
     --welcome_h1_text_color:var(--default_h1_font);

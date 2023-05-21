@@ -26,13 +26,13 @@ function navbar_monitor()
 {    
     if(window.scrollY > height_window)
     {
-        document.getElementById('tabs_container').classList.add('tabs_container__top');
+        document.getElementById('navbar').classList.add('navbar_sticky_top');
         document.getElementById('tab_welcome').classList.replace('tab_select', 'tab');
         // current_section = "welcome"
     }
     else
     {
-        document.getElementById('tabs_container').classList.remove('tabs_container__top');
+        document.getElementById('navbar').classList.remove('navbar_sticky_top');
         document.getElementById('tab_welcome').classList.replace('tab', 'tab_select');
     }
 
