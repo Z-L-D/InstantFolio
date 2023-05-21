@@ -12,9 +12,13 @@
         <!-- ............................................. -->
         
         <link rel="stylesheet" href="" />
-        <link rel="stylesheet" type="text/css" href="css/default.css" />
         <link rel="stylesheet" type="text/css" href="css/tag_animation.css" />
         <link rel="stylesheet" type="text/css" href="css/theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/main_global.css" />
+        <link rel="stylesheet" type="text/css" href="css/main_navbar.css" />
+        <link rel="stylesheet" type="text/css" href="css/main_landing.css" />
+        <link rel="stylesheet" type="text/css" href="css/main_work.css" />
+        <link rel="stylesheet" type="text/css" href="css/main_contact.css" />
         <Style id="tag_animation"></Style>
 
         <!-- ''''''''''''''''''''''''''''''''''''''''''''' -->
@@ -51,77 +55,25 @@
                         content: '.';
                         color: var(--default_h1_punctuation);
                     }
+
+            .section
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+                position: relative;
+                text-align: center;
+                padding: 0 2em;
+                background: var(--default_section_background);
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
         </style>
 
         <style>
-            #navbar
-            {
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                height: 70px;
-                z-index: 10;
-                background-color: #ffffff;
-                box-shadow: 0 0 var(--navbar_shadow_size) var(--navbar_shadow_color);
-            }
-
-                    #navbar
-                    a
-                    {
-                        text-decoration: none;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        flex: 1;
-                        letter-spacing: 0.1rem;
-                        transition: all 0.5s ease;
-                        font-size: 0.8rem;
-                    }
-
-
-
-                    #navbar
-                    .item
-                    {
-                        
-                        color: var(--navbar_text_color);
-                        background-color: var(--navbar_background);
-                    }
-
-                            #navbar
-                            .item:hover
-                            {
-                                transition: all 0.3s ease;
-                                color: var(--navbar_text_color_hover);
-                                background: var(--navbar_background_hover);
-                            }
-
-                    #navbar
-                    .item_select
-                    {
-                        color: var(--navbar_text_color_hover);
-                        background-color: var(--navbar_background_select);
-                    }
-
-                            #navbar
-                            .item_select:hover
-                            {
-                                transition: all 0.3s ease;
-                                color: var(--navbar_text_color_hover);
-                                background: var(--navbar_background_hover);
-                            }
-
-                        
-            .navbar_bottom{
-                position: absolute;
-                bottom: 0px;
-            }   
-
-            .navbar_top
-            {
-                position: sticky;
-                top: 0px;
-            }
+            
         </style>
 
         <section id="navbar" class="navbar_bottom">
@@ -131,19 +83,275 @@
             <a id="tab_contact" class="item" href="#section_contact">CONTACT</a>
         </section>
 
-        
 
+        <style>
+            .welcome
+            {
+                opacity: 1;
+                background-color: var(--welcome_background);
+                color: var(--welcome_text_color);
+            }
+
+                    .welcome
+                    h1
+                    {
+                        color:var(--welcome_h1_text_color);
+                    }
+        </style>
+        
         <section id="section_welcome" class="section welcome">
             <h1>WELCOME</h1>
         </section>
 
 
+        <style>
+            .about
+        {
+            opacity: 1;
+            background-color: var(--about_background);
+        }
+
+                .about
+                h1
+                {
+                    color:var(--about_h1_text_color);
+                }
+        </style>
 
         <section id="section_about" class="section about">
             <h1>ABOUT</h1>
         </section>
 
         
+        <style>
+            .portfolio
+            {
+                opacity: 1;
+                justify-content: unset;
+                background-color: var(--portfolio_background);
+            }
+            
+                    .portfolio
+                    h1
+                    {
+                        color:var(--portfolio_h1_text_color);
+                    }
+                
+                    .portfolio
+                    .tags
+                    {
+                        display: flex;
+                        flex-direction: row;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        margin: 10px;
+                        color:var(--portfolio_tags_text_color);
+                    }
+                
+                            .portfolio
+                            .tags
+                            .item
+                            {
+                                font-size: 1.2vw;
+                                margin:0.53vw 1vw;
+                                padding: 5px;
+                                text-transform: uppercase;
+                                position: relative;
+                            }
+                        
+                                    .portfolio
+                                    .tags
+                                    .item:hover
+                                    {
+                                        cursor: pointer;
+                                    }
+                                
+                    .portfolio
+                    .row
+                    {
+                        display: flex;
+                        flex-direction: row;
+                        flex-flow: row wrap;
+                        justify-content: center;
+                        max-width: 75vw;
+                        position: relative;
+                        flex-direction: row-reverse;
+                    }
+                
+                            .portfolio
+                            .row
+                            .item
+                            {
+                                margin:10px;
+                                width:18vw;
+                                max-width: 600px;
+                                min-width: 300px;
+                                height:calc(18vw / 1.7777777);
+                                max-height: 338px;
+                                min-height: 169px;
+                                position: relative;
+                                overflow: hidden;
+                                color: var(--item_text_color);
+                                background-color: var(--item_background);
+                            }
+                        
+                                    .portfolio
+                                    .row
+                                    .item:hover
+                                    {
+                                        cursor: pointer;
+                                    }
+                                
+                                    .portfolio
+                                    .row
+                                    .item
+                                    .card
+                                    {
+                                        position: absolute;
+                                        text-align: left;
+                                        width: 100%;
+                                        height: 100%;
+                                        left: 0%;
+                                        padding: 1vw 1vw;
+                                    }
+                                
+                                            .portfolio
+                                            .row
+                                            .item
+                                            .card
+                                            .card_background
+                                            {
+                                                position: absolute;
+                                                width: 125%;
+                                                height: 125%;
+                                                top: 0%;
+                                                left: 0%;
+                                                opacity: 0.6;
+                                                z-index: 0;
+                                                background-position: center;
+                                                background-repeat: no-repeat;
+                                                background-size: cover;
+                                                transition: left 0.4s;
+                                            }
+                                        
+                                            .portfolio
+                                            .row
+                                            .item:hover
+                                            .card
+                                            .card_background
+                                            {
+                                                left: -33%;
+                                            }
+                                        
+                                            .portfolio
+                                            .row
+                                            .item
+                                            .card
+                                            .text
+                                            .card_title
+                                            {
+                                                display: flex;
+                                                flex-direction: column;
+                                            }
+                                        
+                                                    .portfolio
+                                                    .row
+                                                    .item
+                                                    .card
+                                                    .text
+                                                    .card_title
+                                                    {
+                                                        position: relative;
+                                                        font-size: 1.5em;
+                                                        opacity: 0.99999;
+                                                        z-index: 1;
+                                                        width: 16vw;
+                                                        max-width: 550px;
+                                                        min-width: 250px;
+                                                        text-transform: uppercase;
+                                                    }
+                                                
+                                                    .portfolio
+                                                    .row
+                                                    .item
+                                                    .text
+                                                    .description
+                                                    {
+                                                        position: relative;
+                                                        left: 125%;
+                                                        transition: left 0.3s, opacity 0.3s;
+                                                        text-align: center;
+                                                        font-size: 1em;
+                                                        opacity: 0;
+                                                        padding: 5px;
+                                                        color: var(--item_text_color);
+                                                    }
+                                                
+                                                            .portfolio
+                                                            .row
+                                                            .item:hover
+                                                            .text
+                                                            .description
+                                                            {
+                                                                left: 0%;
+                                                                opacity: 0.9;
+                                                            }
+                                                        
+                                                    .portfolio
+                                                    .row
+                                                    .item
+                                                    .text
+                                                    .description
+                                                    .text
+                                                    {
+                                                        text-align: justify;
+                                                        width:16vw;
+                                                        max-width: 550px;
+                                                        min-width: 250px;
+                                                        left:43%;
+                                                        word-break:break-all;
+                                                    }
+                                                
+                    .portfolio
+                    .modal
+                    {
+                        position: fixed;
+                        z-index: 100;
+                        left: 0px;
+                        top: -100vh;
+                        width: 100vw;
+                        height: 100vh;
+                        transition: top 0.3s;
+                        color: var(--modal_text_color);
+                        background-color: var(--modal_background)
+                    }
+                
+                    .portfolio
+                    .modal_show
+                    {
+                        top:0px;
+                        transition: top 0.3s;
+                    }
+                
+                    .portfolio
+                    .modal
+                    .box
+                    {
+                        position: absolute;
+                        top:50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 70vw;
+                        max-width: 1000px;
+                        min-width: 300px;
+                        height: 75vh;
+                        min-height: 169px;
+                        text-align: left;
+                        word-break:break-all;
+                        padding: 40px;
+                        background-color: var(--modal_background)
+                    }
+        </style>
 
         <section id="section_work" class="section portfolio">
             <h1>WORK</h1>
@@ -157,6 +365,156 @@
         </section>
 
 
+        <style>
+            .contact
+            {
+                opacity: 1;
+                background-color: var(--contact_background);
+                color:var(--contact_h1_text_color);
+                justify-content: unset;
+            }
+
+                    .contact
+                    .columns
+                    {
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        align-items: stretch;
+                        justify-content: center;
+                        width: 100%;
+                    
+                    }
+                
+                            .contact
+                            .columns
+                            .col_one
+                            {
+                                opacity: 1;
+                                flex-shrink: 3;
+                                width: 50%;
+                                flex-grow: 4;
+                            }
+                        
+                            .contact
+                            .columns
+                            .col_two
+                            {
+                                width: 50%;
+                                min-width: 400px;
+                                flex-grow: 4;
+                            }
+                        
+                                    .contact
+                                    .columns
+                                    .col_two
+                                    .contact_button_group
+                                    {
+                                        opacity: 1;
+                                    }
+                                
+                                            .contact
+                                            .columns
+                                            .col_two
+                                            .contact_button_group
+                                            .contact_button
+                                            {
+                                                position: relative;
+                                                border-radius:4px;
+                                                text-align:center;
+                                                text-decoration:none;
+                                                position: relative;
+                                                display: inline-block;
+                                                width:40px;
+                                                height:28px;
+                                                padding:12px;
+                                                margin:24px 2px;
+                                                -o-transition:all .5s;
+                                                -webkit-transition: all .5s;
+                                                -moz-transition: all .5s;
+                                                transition: all .5s;
+                                                -webkit-font-smoothing: antialiased;
+                                                color:var(--contact_button_text_color);
+                                                background: var(--contact_button_background)
+                                            }
+                                        
+                                                    .contact
+                                                    .columns
+                                                    .col_two
+                                                    .contact_button_group
+                                                    .contact_button
+                                                    .contact_symbol
+                                                    {
+                                                        position: relative;
+                                                        top: -2px;
+                                                        z-index: 8;
+                                                        fill: var(--contact_button_symbol_color);
+                                                    }
+                                                
+                                                    .contact
+                                                    .columns
+                                                    .col_two
+                                                    .contact_button_group
+                                                    .contact_button
+                                                    .contact_text
+                                                    {
+                                                        position:absolute;
+                                                        bottom:0;
+                                                        left:-25px;
+                                                        right:-25px;
+                                                        padding:5px 7px;
+                                                        z-index:9;
+                                                        font-size:13px;
+                                                        border-radius:2px;
+                                                        visibility:hidden;
+                                                        opacity:0;
+                                                        -o-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                        -webkit-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                        -moz-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                        transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                        color:var(--contact_textbox_text_color);
+                                                        background:var(--contact_textbox_background);
+                                                    }
+                                                
+                                                    .contact
+                                                    .columns
+                                                    .col_two
+                                                    .contact_button_group
+                                                    .contact_button
+                                                    .contact_text:before 
+                                                    {
+                                                        content:'';
+                                                        width: 0; 
+                                                        height: 0; 
+                                                        border-left: 5px solid transparent;
+                                                        border-right: 5px solid transparent;
+                                                        position:absolute;
+                                                        bottom:-5px;
+                                                        left:50px;
+                                                        border-top: 5px solid var(--contact_textbox_background);
+                                                    }
+                                                
+                                                            .contact:hover
+                                                            .columns
+                                                            .col_two
+                                                            .contact_button_group
+                                                            .contact_button:hover
+                                                            .contact_text
+                                                            {
+                                                                bottom:60px;
+                                                                visibility:visible;
+                                                                opacity:1;
+                                                            }
+                                                        
+                                                            .contact:hover
+                                                            .columns
+                                                            .col_two
+                                                            .contact_button_group
+                                                            .contact_button:hover
+                                                            {
+                                                                background: var(--contact_button_background_hover);
+                                                            }
+        </style>
 
         <section id="section_contact" class="section contact">
             <h1>CONTACT</h1>
@@ -176,6 +534,14 @@
         <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
         <script type="text/javascript" id="hcb"> /**/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24LeLW41vfIdk7AbjJo%2FH8X0"+"&opts=16862&num=10&ts=1610077761074");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /**/ </script> -->
         <!-- end www.htmlcommentbox.com -->
+
+        <style>
+            footer
+            {
+                background: var(--footer_background);
+                height: 75px;
+            }
+        </style>
                 
         <footer>
             MIT: ZLDSTUDIO 2021.

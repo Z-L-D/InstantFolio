@@ -1,0 +1,68 @@
+#navbar
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+    background-color: #ffffff;
+    box-shadow: 0 0 var(--navbar_shadow_size) var(--navbar_shadow_color);
+}
+
+        #navbar
+        a
+        {
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            letter-spacing: 0.1rem;
+            transition: all 0.5s ease;
+            font-size: 0.8rem;
+        }
+
+
+         #navbar
+         .item
+         {
+             
+             color: var(--navbar_text_color);
+             background-color: var(--navbar_background);
+         }
+        
+                 #navbar
+                 .item:hover
+                 {
+                     transition: all 0.3s ease;
+                     color: var(--navbar_text_color_hover);
+                     background: var(--navbar_background_hover);
+                 }
+              
+                 
+         #navbar
+         .item_select
+         {
+             color: var(--navbar_text_color_hover);
+             background-color: var(--navbar_background_select);
+         }
+        
+                 #navbar
+                 .item_select:hover
+                 {
+                     transition: all 0.3s ease;
+                     color: var(--navbar_text_color_hover);
+                     background: var(--navbar_background_hover);
+                 }
+
+                        
+        .navbar_bottom{
+            position: absolute;
+            bottom: 0px;
+        }   
+
+        .navbar_top
+        {
+            position: sticky;
+            top: 0px;
+        }
