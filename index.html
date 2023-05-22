@@ -68,8 +68,6 @@
                 text-align: center;
                 padding: 0 2em;
                 background: var(--default_section_background);
-                padding-top: 100px;
-                padding-bottom: 100px;
             }
         </style>
 
@@ -86,35 +84,35 @@
 
 
         <style>
-            #landing
+            #section_landing
             {
                 background-color: var(--welcome_background);
                 color: var(--welcome_text_color);
             }
 
-                    #landing
+                    #section_landing
                     h1
                     {
                         color:var(--welcome_h1_text_color);
                     }
         </style>
         
-        <section id="section_welcome" class="landing">
+        <section id="section_landing" class="landing">
             <h1>WELCOME</h1>
         </section>
 
 
         <style>
-            .about
-        {
-            background-color: var(--about_background);
-        }
+            #section_about
+            {
+                background-color: var(--about_background);
+            }
 
-                .about
-                h1
-                {
-                    color:var(--about_h1_text_color);
-                }
+                    #section_about
+                    h1
+                    {
+                        color:var(--about_h1_text_color);
+                    }
         </style>
 
         <section id="section_about" class="about">
@@ -513,7 +511,24 @@
                                                             }
         </style>
 
-        <section id="section_contact" class="contact">
+        <section id="section_contact_org" class="contact">
+            <h1>CONTACT</h1>
+            <columns class="columns">
+                <col_one class="col_one">
+                    <h2>Get In Touch</h2>
+                </col_one>
+                <col_two class="col_two">
+                    <h2>Stay In Touch</h2>
+                    <group id="contact_button_group" class="contact_button_group">           <!--generated-->    </group>
+                </col_two>
+            </columns>
+        </section>
+
+        <style>
+            
+        </style>
+
+        <section id="section_contact_org" class="contact">
             <h1>CONTACT</h1>
             <columns class="columns">
                 <col_one class="col_one">
