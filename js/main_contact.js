@@ -3,7 +3,7 @@ function contact_section(websiteid, websitename, userlink, symbol, viewbox)
     userlink = userlink.replace("@@REPLACE@@", site_settings.site_contact_socialmedia[websiteid]);
     if(site_settings.site_contact_socialmedia[websiteid] != "")
     {
-        document.getElementById("contact_content_socialmedia_buttons").insertAdjacentHTML('beforeend', `
+        document.querySelector(".contact_content_socialmedia_buttons").insertAdjacentHTML('beforeend', `
             <a class="contact_content_socialmedia_buttons_button" href="${userlink}">
                 <div class="contact_content_socialmedia_buttons_logo">
                     <svg width="32" height="32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="${viewbox}">
