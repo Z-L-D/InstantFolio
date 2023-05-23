@@ -3,14 +3,14 @@ function contact_section(websiteid, websitename, userlink, symbol, viewbox)
     userlink = userlink.replace("@@REPLACE@@", site_settings.site_contact[websiteid]);
     if(site_settings.site_contact[websiteid] != "")
     {
-        document.getElementById("contact_button_group").insertAdjacentHTML('beforeend', `
-            <a class="contact_button" href="${userlink}">
-                <symbol class="contact_symbol">
+        document.getElementById("contact_content_socialmedia_buttons").insertAdjacentHTML('beforeend', `
+            <a class="contact_content_socialmedia_buttons_button" href="${userlink}">
+                <div class="contact_content_socialmedia_buttons_logo">
                     <svg width="32" height="32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="${viewbox}">
                         <path d="${symbol}"></path>
                     </svg>
-                </symbol>
-                <span class="contact_text">${websitename}</span>
+                </div>
+                <span class="contact_content_socialmedia_buttons_text">${websitename}</span>
             </a>
             
         `)

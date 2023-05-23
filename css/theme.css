@@ -32,7 +32,7 @@
     --about_background:var(--default_section_background);
     --about_h1_text_color:var(--default_h1_font);
 
-    /* ---- PORTFOLIO ---- */
+    /* ---- WORK ---- */
     --portfolio_background:#333;
     --portfolio_h1_text_color:white;
     --portfolio_tags_text_color:white;
@@ -49,9 +49,10 @@
     --contact_background:white;
     --contact_h1_text_color:var(--default_h1_font);
     --contact_button_background:white;
-    --contact_button_background_hover:var(--contact_textbox_text_color);
+    --contact_button_background_hover:#cccccc;
     --contact_button_text_color:white;
     --contact_button_symbol_color:rgb(233, 74, 26);
+    --contact_button_symbol_color_hover: rgb(99, 23, 0);
     --contact_textbox_background:var(--default_section_background);
     --contact_textbox_text_color:#666;
 

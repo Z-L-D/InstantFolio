@@ -360,65 +360,46 @@
             </div>
         </section>
 
-
         <style>
-            .contact
-            {
+
+            #section_contact{
                 background-color: var(--contact_background);
-                color:var(--contact_h1_text_color);
-                justify-content: unset;
             }
 
-                    .contact
-                    .columns
-                    {
-                        display: flex;
-                        flex-direction: row;
-                        flex-wrap: wrap;
-                        align-items: stretch;
-                        justify-content: center;
+                    #section_contact
+                    .contact_content{
                         width: 100%;
-                    
+                        display: grid;
+                        grid-template-areas: "contact_email contact_socialmedia";
+                        grid-template-columns: 1fr 1fr;
                     }
-                
-                            .contact
-                            .columns
-                            .col_one
-                            {
-                                opacity: 1;
-                                flex-shrink: 3;
-                                width: 50%;
-                                flex-grow: 4;
+
+                            #section_contact
+                            .contact_content
+                            .contact_content_email{
+                                grid-area: contact_email;
                             }
-                        
-                            .contact
-                            .columns
-                            .col_two
-                            {
-                                width: 50%;
-                                min-width: 400px;
-                                flex-grow: 4;
+
+                            #section_contact
+                            .contact_content
+                            .contact_content_socialmedia{
+                                grid-area: contact_socialmedia;
                             }
-                        
-                                    .contact
-                                    .columns
-                                    .col_two
-                                    .contact_button_group
-                                    {
-                                        opacity: 1;
-                                    }
-                                
-                                            .contact
-                                            .columns
-                                            .col_two
-                                            .contact_button_group
-                                            .contact_button
-                                            {
+
+                                    /* #section_contact
+                                    .contact_content
+                                    .contact_content_socialmedia
+                                    .contact_content_socialmedia_buttons{} */
+
+                                            #section_contact
+                                            .contact_content
+                                            .contact_content_socialmedia
+                                            .contact_content_socialmedia_buttons
+                                            .contact_content_socialmedia_buttons_button{
                                                 position: relative;
                                                 border-radius:4px;
                                                 text-align:center;
                                                 text-decoration:none;
-                                                position: relative;
                                                 display: inline-block;
                                                 width:40px;
                                                 height:28px;
@@ -428,117 +409,102 @@
                                                 -webkit-transition: all .5s;
                                                 -moz-transition: all .5s;
                                                 transition: all .5s;
-                                                -webkit-font-smoothing: antialiased;
                                                 color:var(--contact_button_text_color);
                                                 background: var(--contact_button_background)
                                             }
-                                        
-                                                    .contact
-                                                    .columns
-                                                    .col_two
-                                                    .contact_button_group
-                                                    .contact_button
-                                                    .contact_symbol
-                                                    {
-                                                        position: relative;
-                                                        top: -2px;
-                                                        z-index: 8;
-                                                        fill: var(--contact_button_symbol_color);
+
+                                                    #section_contact
+                                                    .contact_content
+                                                    .contact_content_socialmedia
+                                                    .contact_content_socialmedia_buttons
+                                                    .contact_content_socialmedia_buttons_button:hover{
+                                                        background: var(--contact_button_background_hover);
                                                     }
-                                                
-                                                    .contact
-                                                    .columns
-                                                    .col_two
-                                                    .contact_button_group
-                                                    .contact_button
-                                                    .contact_text
-                                                    {
-                                                        position:absolute;
-                                                        bottom:0;
-                                                        left:-25px;
-                                                        right:-25px;
-                                                        padding:5px 7px;
-                                                        z-index:9;
-                                                        font-size:13px;
-                                                        border-radius:2px;
-                                                        visibility:hidden;
-                                                        opacity:0;
-                                                        -o-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                        -webkit-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                        -moz-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                        transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                        color:var(--contact_textbox_text_color);
-                                                        background:var(--contact_textbox_background);
+
+                                            #section_contact
+                                            .contact_content
+                                            .contact_content_socialmedia
+                                            .contact_content_socialmedia_buttons
+                                            .contact_content_socialmedia_buttons_logo{
+                                                position: relative;
+                                                top: -2px;
+                                                z-index: 8;
+                                                fill: var(--contact_button_symbol_color);
+                                            }
+
+                                                    #section_contact
+                                                    .contact_content
+                                                    .contact_content_socialmedia
+                                                    .contact_content_socialmedia_buttons
+                                                    .contact_content_socialmedia_buttons_button:hover
+                                                    .contact_content_socialmedia_buttons_logo{
+                                                        fill: var(--contact_button_symbol_color_hover);
                                                     }
-                                                
-                                                    .contact
-                                                    .columns
-                                                    .col_two
-                                                    .contact_button_group
-                                                    .contact_button
-                                                    .contact_text:before 
-                                                    {
+
+                                            #section_contact
+                                            .contact_content
+                                            .contact_content_socialmedia
+                                            .contact_content_socialmedia_buttons
+                                            .contact_content_socialmedia_buttons_text{
+                                                position:absolute;
+                                                bottom:0;
+                                                left:-25px;
+                                                right:-25px;
+                                                padding:5px 7px;
+                                                z-index:9;
+                                                font-size:13px;
+                                                border-radius:2px;
+                                                visibility:hidden;
+                                                opacity:0;
+                                                -o-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                -webkit-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                -moz-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                                                color:var(--contact_textbox_text_color);
+                                                background:var(--contact_textbox_background);
+                                            }
+
+                                                    #section_contact
+                                                    .contact_content
+                                                    .contact_content_socialmedia
+                                                    .contact_content_socialmedia_buttons
+                                                    .contact_content_socialmedia_buttons_text:before{
                                                         content:'';
                                                         width: 0; 
                                                         height: 0; 
                                                         border-left: 5px solid transparent;
                                                         border-right: 5px solid transparent;
+                                                        border-top: 5px solid var(--contact_textbox_background);
                                                         position:absolute;
                                                         bottom:-5px;
                                                         left:50px;
-                                                        border-top: 5px solid var(--contact_textbox_background);
                                                     }
-                                                
-                                                            .contact:hover
-                                                            .columns
-                                                            .col_two
-                                                            .contact_button_group
-                                                            .contact_button:hover
-                                                            .contact_text
-                                                            {
-                                                                bottom:60px;
-                                                                visibility:visible;
-                                                                opacity:1;
-                                                            }
-                                                        
-                                                            .contact:hover
-                                                            .columns
-                                                            .col_two
-                                                            .contact_button_group
-                                                            .contact_button:hover
-                                                            {
-                                                                background: var(--contact_button_background_hover);
-                                                            }
+
+                                                    #section_contact
+                                                    .contact_content
+                                                    .contact_content_socialmedia
+                                                    .contact_content_socialmedia_buttons
+                                                    .contact_content_socialmedia_buttons_button:hover
+                                                    .contact_content_socialmedia_buttons_text{
+                                                        bottom:60px;
+                                                        visibility:visible;
+                                                        opacity:1;
+                                                    }
+
         </style>
 
-        <section id="section_contact_org" class="contact">
+        <section id="section_contact" class="contact">
             <h1>CONTACT</h1>
-            <columns class="columns">
-                <col_one class="col_one">
+            <div class="contact_content">
+                <div class="contact_content_email">
                     <h2>Get In Touch</h2>
-                </col_one>
-                <col_two class="col_two">
-                    <h2>Stay In Touch</h2>
-                    <group id="contact_button_group" class="contact_button_group">           <!--generated-->    </group>
-                </col_two>
-            </columns>
-        </section>
+                </div>
 
-        <style>
-            
-        </style>
-
-        <section id="section_contact_org" class="contact">
-            <h1>CONTACT</h1>
-            <columns class="columns">
-                <col_one class="col_one">
-                    <h2>Get In Touch</h2>
-                </col_one>
-                <col_two class="col_two">
+                <div class="contact_content_socialmedia">
                     <h2>Stay In Touch</h2>
-                    <group id="contact_button_group" class="contact_button_group">           <!--generated-->    </group>
-                </col_two>
-            </columns>
+                    <div id="contact_content_socialmedia_buttons" class="contact_content_socialmedia_buttons"><!--generated--></div>
+                </div>
+            </div>
         </section>
 
         <!-- begin wwww.htmlcommentbox.com -->
