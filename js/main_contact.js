@@ -1,7 +1,7 @@
 function contact_section(websiteid, websitename, userlink, symbol, viewbox)
 {
-    userlink = userlink.replace("@@REPLACE@@", site_settings.site_contact[websiteid]);
-    if(site_settings.site_contact[websiteid] != "")
+    userlink = userlink.replace("@@REPLACE@@", site_settings.site_contact_socialmedia[websiteid]);
+    if(site_settings.site_contact_socialmedia[websiteid] != "")
     {
         document.getElementById("contact_content_socialmedia_buttons").insertAdjacentHTML('beforeend', `
             <a class="contact_content_socialmedia_buttons_button" href="${userlink}">
@@ -18,8 +18,29 @@ function contact_section(websiteid, websitename, userlink, symbol, viewbox)
 }
 
 function load_contact(){
-    if(site_settings.site_contact.site_section_contact === true)
-    {   
+    if(site_settings.site_section_contact === true){   
+        if(site_settings.site_contact_email === "" || site_settings.site_contact_email === undefined){
+            document.querySelector('.contact_content').style.gridTemplateColumns = "1fr";
+            document.querySelector('.contact_content_email').style.display = "none";
+        }
+        else if(site_settings.site_contact_email === "Email Push"){
+            document.querySelector('.contact_content_email').innerHTML = `
+                <h2>Get In Touch</h2>
+            `;
+        };
+        // else if(site_settings.site_contact_email === "HTML Comment Box"){
+        //     document.querySelector('.contact_content_email').innerHTML = `
+        //         <h2>Get In Touch</h2>
+        //         <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
+        //         <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+        //         <script type="text/javascript" id="hcb"> /**/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%24LeLW41vfIdk7AbjJo%2FH8X0"+"&opts=16862&num=10&ts=1610077761074");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /**/ </script>
+        //     `
+        // }
+
+
+
+        
+
         const social_media_list = [ {id:"bandcamp",         name:"bandcamp",        userlink:"https://@@REPLACE@@.bandcamp.com",                sharelink:"",       symbol:"M0 18.75l7.437-13.5H24l-7.438 13.5H0z", viewbox: "0 0 24 24"},
                                     {id:"codepen",          name:"CodePen",         userlink:"https://codepen.io/@@REPLACE@@",                  sharelink:"",       symbol:"M502.285 159.704l-234-156c-7.987-4.915-16.511-4.96-24.571 0l-234 156C3.714 163.703 0 170.847 0 177.989v155.999c0 7.143 3.714 14.286 9.715 18.286l234 156.022c7.987 4.915 16.511 4.96 24.571 0l234-156.022c6-3.999 9.715-11.143 9.715-18.286V177.989c-.001-7.142-3.715-14.286-9.716-18.285zM278 63.131l172.286 114.858-76.857 51.429L278 165.703V63.131zm-44 0v102.572l-95.429 63.715-76.857-51.429L234 63.131zM44 219.132l55.143 36.857L44 292.846v-73.714zm190 229.715L61.714 333.989l76.857-51.429L234 346.275v102.572zm22-140.858l-77.715-52 77.715-52 77.715 52-77.715 52zm22 140.858V346.275l95.429-63.715 76.857 51.429L278 448.847zm190-156.001l-55.143-36.857L468 219.132v73.714z", viewbox: "0 0 512 512"},
                                     {id:"deviantart",       name:"DeviantArt",      userlink:"https://www.deviantart.com/@@REPLACE@@",          sharelink:"",       symbol:"M320 93.2l-98.2 179.1 7.4 9.5H320v127.7H159.1l-13.5 9.2-43.7 84c-.3 0-8.6 8.6-9.2 9.2H0v-93.2l93.2-179.4-7.4-9.2H0V102.5h156l13.5-9.2 43.7-84c.3 0 8.6-8.6 9.2-9.2H320v93.1z", viewbox: "0 0 320 512"},

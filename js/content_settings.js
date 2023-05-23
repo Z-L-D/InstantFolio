@@ -4,9 +4,10 @@ var site_settings = {   site_title:"InstantFolio",
                         site_description:"",
                         site_section_about:true,
                         site_section_work:true,
-                        site_contact:
-                           {
-                               site_section_contact:true,
+                        site_section_contact:true,
+                        site_contact_email: "Email Push", // ["Email Push"]
+                        site_contact_socialmedia:
+                            {
                                bandcamp:"a",
                                codepen:"a",
                                deviantart:"a",
@@ -36,7 +37,7 @@ var site_settings = {   site_title:"InstantFolio",
                                vimeo:"a",
                                wikipedia:"a",
                                youtube:"a"
-                           },
+                            },
                         site_tag_animation:"pullUpDown",
                         site_blog:false,
                         site_downloads:false,
