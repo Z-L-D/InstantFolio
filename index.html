@@ -499,13 +499,18 @@
                 <div class="contact_content_email">
                     <h2>Get In Touch</h2>
                     <div class="contact_content_email_form">
-                        <form>
-                            <label for="fname">Name:</label><br>
-                            <input type="text" id="fname" name="fname" value="John"><br>
-                            <label for="lname">Email:</label><br>
-                            <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <form action="/submit_form" method="post">
+                            <label for="fname">Name</label><br>
+                            <input type="text" id="fname" name="fname"><br>
+                            
+                            <label for="email">Email</label><br>
+                            <input type="email" id="email" name="email" pattern=".+@globex.com" size="30" required><br>
+                            
+                            <label for="message">Message</label><br>
+                            <textarea id="message" name="message" rows="4" cols="50"></textarea><br>
+                            
                             <input type="submit" value="Submit">
-                        </form>
+                        </form> 
                     </div>
                 </div>
 
