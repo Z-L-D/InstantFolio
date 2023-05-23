@@ -23,11 +23,11 @@ function load_contact(){
             document.querySelector('.contact_content').style.gridTemplateColumns = "1fr";
             document.querySelector('.contact_content_email').style.display = "none";
         }
-        else if(site_settings.site_contact_email === "Email Push"){
-            document.querySelector('.contact_content_email').innerHTML = `
-                <h2>Get In Touch</h2>
-            `;
-        };
+        // else if(site_settings.site_contact_email === "Email Push"){
+        //     document.querySelector('.contact_content_email').innerHTML = `
+        //         <h2>Get In Touch</h2>
+        //     `;
+        // };
         // else if(site_settings.site_contact_email === "HTML Comment Box"){
         //     document.querySelector('.contact_content_email').innerHTML = `
         //         <h2>Get In Touch</h2>
