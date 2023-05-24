@@ -12,7 +12,6 @@ function contact_section(websiteid, websitename, userlink, symbol, viewbox)
                 </div>
                 <span class="contact_content_socialmedia_buttons_text">${websitename}</span>
             </a>
-            
         `)
     }
 }
