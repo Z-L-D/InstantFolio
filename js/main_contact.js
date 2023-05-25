@@ -31,11 +31,16 @@ function load_contact(){
                 const email_form_name = document.getElementById('contact_content_email_form_name').value;
                 const email_form_email = document.getElementById('contact_content_email_form_email').value;
                 const email_form_message = document.getElementById('contact_content_email_form_message').value;
-                const email_form_subject = "Subject line" //define this in settings !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                const email_form_subject = `Enquiry from ${email_form_name}`
+                const email_form_emailto = "test@test.com" //define this in settings !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-                // myFunction(name, email);
-                console.log(`NAME: ${email_form_name}, EMAIL: ${email_form_email}, MESSAGE: ${email_form_message}`);
-                window.open(`mailto:${email_form_email}?subject=${email_form_subject}&body=${email_form_message}`);
+                const email_encrypt = base64Encode(email_form_emailto);
+                const email_decrypt = base64Decode(email_encrypt);
+
+                console.log(email_encrypt);
+                console.log(email_decrypt);
+
+                // window.open(`mailto:${email_form_emailto}?subject=${email_form_subject}&body=Name: ${email_form_name}%0D%0AEmail: ${email_form_email}%0D%0A%0D%0A${email_form_message}`);
             });
 
         const social_media_list = [ {id:"bandcamp",         name:"bandcamp",        userlink:"https://@@REPLACE@@.bandcamp.com",                sharelink:"",       symbol:"M0 18.75l7.437-13.5H24l-7.438 13.5H0z", viewbox: "0 0 24 24"},
