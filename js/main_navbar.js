@@ -1,6 +1,6 @@
 var height_window;
 var height_about;
-var height_work;
+var height_projects;
 var height_contact;
 var current_section;
 
@@ -13,9 +13,9 @@ function get_sections()
     height_about = height_about.y;
     height_about = height_about - 70;
 
-    height_work = document.getElementById("section_work").getBoundingClientRect();
-    height_work = height_work.y;
-    height_work = height_work - 70;
+    height_projects = document.getElementById("section_projects").getBoundingClientRect();
+    height_projects = height_projects.y;
+    height_projects = height_projects - 70;
 
     height_contact = document.getElementById("section_contact").getBoundingClientRect();
     height_contact = height_contact.y;
@@ -37,7 +37,7 @@ function navbar_monitor()
     }
 
 
-    if(window.scrollY > height_about && window.scrollY < height_work)
+    if(window.scrollY > height_about && window.scrollY < height_projects)
     {
         document.getElementById('tab_about').classList.replace('item', 'item_select');
         current_section = "about"
@@ -48,14 +48,14 @@ function navbar_monitor()
     }
 
 
-    if(window.scrollY > height_work && window.scrollY < height_contact)
+    if(window.scrollY > height_projects && window.scrollY < height_contact)
     {
-        document.getElementById('tab_work').classList.replace('item', 'item_select');
-        current_section = "work"
+        document.getElementById('tab_projects').classList.replace('item', 'item_select');
+        current_section = "projects"
     }
     else
     {
-        document.getElementById('tab_work').classList.replace('item_select', 'item');
+        document.getElementById('tab_projects').classList.replace('item_select', 'item');
     }
 
 
@@ -68,21 +68,11 @@ function navbar_monitor()
     {
         document.getElementById('tab_contact').classList.replace('item_select', 'item');
     }
-
-
-    // console.log("SCROLL: " + window.scrollY);
-    // console.log("WINDOW: " + height_window);
-    // console.log("ABOUT: " + height_about);
-    // console.log("WORK: " + height_work);
-    // console.log("CONTACT: " + height_contact);
-    // console.log("CURRENT: " + current_section);
 }
 
 function viewport_reset()
 {
     current_section_capture = current_section;
-
-    // console.log(current_section_capture)
 
     window.scrollTo(0, 0);
 
@@ -100,8 +90,8 @@ function viewport_return(section_return)
         case "about":
             window.scrollTo(0, height_about + 70);
             break;
-        case "work":
-            window.scrollTo(0, height_work + 70);
+        case "projects":
+            window.scrollTo(0, height_projects + 70);
             break;
         case "contact":
             window.scrollTo(0, height_contact + 70);

@@ -4,7 +4,7 @@ var site_settings = {
     site_subtitle:"",
     site_description:"",
     site_section_about:true,
-    site_section_work:true,
+    site_section_projects:true,
     site_section_contact:true,
     site_contact_email: "Email Push", // ["Email Push"]
     site_contact_socialmedia:
@@ -44,9 +44,11 @@ var site_settings = {
     site_downloads:false,
 };
 
-const landing_content = "";
+const content_landing = "";
 
-const about_content = "";
+const content_about = "";
+
+const header_projects = "Projects";
 
 const post_array = [
     {

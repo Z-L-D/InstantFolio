@@ -12,6 +12,9 @@ function load_settings()
     if(site_settings.site_title != undefined){
         document.getElementById("site_title").innerHTML = site_settings.site_title;
     }
+
+    document.getElementById('tab_projects').innerHTML = header_projects.toLocaleUpperCase();
+    document.getElementById('projects_header').innerHTML = header_projects.toLocaleUpperCase();
 }
 
 function base64Encode(input) {
