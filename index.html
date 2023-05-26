@@ -33,47 +33,6 @@
     <!-- ******************** BODY ******************* -->
     <!-- ............................................. -->
     <body>
-        
-        <style>
-            body
-            {
-                padding: 0px;
-                margin: 0px;
-                font-family: var(--default_page_font);
-            }
-
-            h1
-            {
-                color: var(--default_h1_text_color);
-                font-family: var(--default_h1_font);
-                font-weight: var(--default_h1_font_weight);
-                font-size: var(--default_h1_font_size);
-            }
-
-                    h1::after
-                    {
-                        content: '.';
-                        color: var(--default_h1_punctuation);
-                    }
-
-            section
-            {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                min-height: 100svh;
-                min-height: 100vh;
-                position: relative;
-                text-align: center;
-                padding: 0 2em;
-                background: var(--default_section_background);
-            }
-        </style>
-
-        <style>
-            
-        </style>
 
         <div id="navbar" class="navbar_bottom">
             <a id="tab_welcome" class="item" href="#section_landing">HOME</a>
@@ -82,20 +41,6 @@
             <a id="tab_contact" class="item" href="#section_contact">CONTACT</a>
         </div>
 
-
-        <style>
-            #section_landing
-            {
-                background-color: var(--welcome_background);
-                color: var(--welcome_text_color);
-            }
-
-                    #section_landing
-                    h1
-                    {
-                        color:var(--welcome_h1_text_color);
-                    }
-        </style>
         
         <section id="section_landing" class="landing">
             <h1>WELCOME</h1>
@@ -359,156 +304,6 @@
             </div>
         </section>
 
-        <style>
-
-            #section_contact{
-                background-color: var(--contact_background);
-            }
-
-                    #section_contact
-                    .contact_content{
-                        width: 100%;
-                        display: grid;
-                        grid-template-areas: "contact_email contact_socialmedia";
-                        grid-template-columns: 1fr 1fr;
-                    }
-
-                            #section_contact
-                            .contact_content
-                            .contact_content_email{
-                                grid-area: contact_email;
-                            }
-
-                                    #section_contact
-                                    .contact_content
-                                    .contact_content_email
-                                    label,
-                                    #section_contact
-                                    .contact_content
-                                    .contact_content_email
-                                    input,
-                                    #section_contact
-                                    .contact_content
-                                    .contact_content_email
-                                    textarea
-                                    {
-                                        width: 400px;
-                                        padding: 4px;
-                                    }
-
-                            #section_contact
-                            .contact_content
-                            .contact_content_socialmedia{
-                                grid-area: contact_socialmedia;
-                            }
-
-                                    /* #section_contact
-                                    .contact_content
-                                    .contact_content_socialmedia
-                                    .contact_content_socialmedia_buttons{} */
-
-                                            #section_contact
-                                            .contact_content
-                                            .contact_content_socialmedia
-                                            .contact_content_socialmedia_buttons
-                                            .contact_content_socialmedia_buttons_button{
-                                                position: relative;
-                                                border-radius:4px;
-                                                text-align:center;
-                                                text-decoration:none;
-                                                display: inline-block;
-                                                width:40px;
-                                                height:28px;
-                                                padding:12px;
-                                                margin:24px 2px;
-                                                -o-transition:all .5s;
-                                                -webkit-transition: all .5s;
-                                                -moz-transition: all .5s;
-                                                transition: all .5s;
-                                                color:var(--contact_button_text_color);
-                                                background: var(--contact_button_background)
-                                            }
-
-                                                    #section_contact
-                                                    .contact_content
-                                                    .contact_content_socialmedia
-                                                    .contact_content_socialmedia_buttons
-                                                    .contact_content_socialmedia_buttons_button:hover{
-                                                        background: var(--contact_button_background_hover);
-                                                    }
-
-                                            #section_contact
-                                            .contact_content
-                                            .contact_content_socialmedia
-                                            .contact_content_socialmedia_buttons
-                                            .contact_content_socialmedia_buttons_logo{
-                                                position: relative;
-                                                top: -2px;
-                                                z-index: 8;
-                                                fill: var(--contact_button_symbol_color);
-                                            }
-
-                                                    #section_contact
-                                                    .contact_content
-                                                    .contact_content_socialmedia
-                                                    .contact_content_socialmedia_buttons
-                                                    .contact_content_socialmedia_buttons_button:hover
-                                                    .contact_content_socialmedia_buttons_logo{
-                                                        fill: var(--contact_button_symbol_color_hover);
-                                                    }
-
-                                            #section_contact
-                                            .contact_content
-                                            .contact_content_socialmedia
-                                            .contact_content_socialmedia_buttons
-                                            .contact_content_socialmedia_buttons_text{
-                                                position:absolute;
-                                                bottom:0;
-                                                left:-25px;
-                                                right:-25px;
-                                                padding:5px 7px;
-                                                z-index:9;
-                                                font-size:13px;
-                                                border-radius:2px;
-                                                visibility:hidden;
-                                                opacity:0;
-                                                -o-transition:all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                -webkit-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                -moz-transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                transition: all .3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-                                                color:var(--contact_textbox_text_color);
-                                                background:var(--contact_textbox_background);
-                                            }
-
-                                                    #section_contact
-                                                    .contact_content
-                                                    .contact_content_socialmedia
-                                                    .contact_content_socialmedia_buttons
-                                                    .contact_content_socialmedia_buttons_text:before{
-                                                        content:'';
-                                                        width: 0; 
-                                                        height: 0; 
-                                                        border-left: 5px solid transparent;
-                                                        border-right: 5px solid transparent;
-                                                        border-top: 5px solid var(--contact_textbox_background);
-                                                        position:absolute;
-                                                        bottom:-5px;
-                                                        left:50px;
-                                                    }
-
-                                                    #section_contact
-                                                    .contact_content
-                                                    .contact_content_socialmedia
-                                                    .contact_content_socialmedia_buttons
-                                                    .contact_content_socialmedia_buttons_button:hover
-                                                    .contact_content_socialmedia_buttons_text{
-                                                        bottom:60px;
-                                                        visibility:visible;
-                                                        opacity:1;
-                                                    }
-
-        </style>
-
         <section id="section_contact" class="contact">
             <h1>CONTACT</h1>
             <div class="contact_content">
@@ -536,14 +331,6 @@
                 </div>
             </div>
         </section>
-
-        <style>
-            footer
-            {
-                background: var(--footer_background);
-                height: 75px;
-            }
-        </style>
                 
         <footer>
             MIT: ZLDSTUDIO 2021.

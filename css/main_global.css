@@ -1,0 +1,40 @@
+body
+{
+    padding: 0px;
+    margin: 0px;
+    font-family: var(--default_page_font);
+}
+
+h1
+{
+    color: var(--default_h1_text_color);
+    font-family: var(--default_h1_font);
+    font-weight: var(--default_h1_font_weight);
+    font-size: var(--default_h1_font_size);
+}
+
+        h1::after
+        {
+            content: '.';
+            color: var(--default_h1_punctuation);
+        }
+
+section
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+    min-height: 100vh;
+    position: relative;
+    text-align: center;
+    padding: 0 2em;
+    background: var(--default_section_background);
+}
+
+footer
+{
+    background: var(--footer_background);
+    height: 75px;
+}
