@@ -3,6 +3,7 @@
 Old project to be updated for public use soon.
 
 -- TODO -------------------------------------------------
+
 [ ] Modal page design
 [ ] Site builder tool
 [ ] Responsiveness
