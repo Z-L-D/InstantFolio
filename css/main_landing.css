@@ -1,0 +1,11 @@
+#section_landing
+{
+    background-color: var(--welcome_background);
+    color: var(--welcome_text_color);
+}
+
+        #section_landing
+        h1
+        {
+            color:var(--welcome_h1_text_color);
+        }
