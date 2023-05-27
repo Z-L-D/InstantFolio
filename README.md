@@ -8,4 +8,10 @@ Old project to be updated for public use soon.
 - [ ] Responsiveness
 - [ ] ADA checkout
 - [ ] Rewrite CSS for projects section
-- [ ] Move CSS into separate files
+- [x] Move global CSS into separate file
+- [x] Move landing CSS into separate file
+- [ ] Move about CSS into separate file
+- [ ] Move projects CSS into separate file
+- [x] Move contact CSS into separate file
+- [x] Move footer CSS into separate file
+- [ ] 
