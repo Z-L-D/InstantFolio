@@ -45,5 +45,6 @@ function base64Decode(input) {
 
 // PAGE INIT
 load_settings();
+load_about();
 load_work();
 load_contact();

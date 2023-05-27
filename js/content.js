@@ -46,7 +46,14 @@ var site_settings = {
 
 const content_landing = "";
 
-const content_about = "";
+const content_about = `Hello! I'm [NAME], a software engineer based in [CITY]. Since graduating from [COLLEGE/UNIVERSITY] in [YEAR], I've been passionate about leveraging technology to solve complex problems.
+
+In my current role at [CURRENT JOB], I develop user-friendly software solutions, helping businesses improve their efficiency and drive innovation. I'm skilled in several programming languages, including Python, Java, and C++.
+
+Outside of work, I'm an avid reader and tech enthusiast who loves exploring the latest industry trends. I also enjoy hiking and spending quality time with my family and my dog, Luna.
+
+This website is a window into my world, showcasing my projects, my thoughts on tech trends, and some snippets of my personal life. Feel free to explore and reach out if you'd like to connect!
+`;
 
 const header_projects = "Projects";
 
