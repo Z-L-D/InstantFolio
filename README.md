@@ -14,4 +14,4 @@ Old project to be updated for public use soon.
 - [ ] Move projects CSS into separate file
 - [x] Move contact CSS into separate file
 - [x] Move footer CSS into separate file
-- [ ] 
+- [ ] Implement intersectionobserver for navbar

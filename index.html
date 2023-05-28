@@ -17,6 +17,7 @@
         <link rel="stylesheet" type="text/css" href="css/main_global.css" />
         <link rel="stylesheet" type="text/css" href="css/main_navbar.css" />
         <link rel="stylesheet" type="text/css" href="css/main_landing.css" />
+        <link rel="stylesheet" type="text/css" href="css/main_about.css" />
         <link rel="stylesheet" type="text/css" href="css/main_work.css" />
         <link rel="stylesheet" type="text/css" href="css/main_contact.css" />
         <Style id="tag_animation"></Style>
@@ -51,23 +52,47 @@
             #section_about
             {
                 background-color: var(--about_background);
+                display: grid;
+                grid-template-areas: 
+                    "header header"
+                    "paratext image";
+                grid-template-columns: 1fr 1fr;
             }
 
                     #section_about
                     h1
                     {
                         color:var(--about_h1_text_color);
+                        grid-area: header;
                     }
 
                     #section_about
-                    p{
-                        text-align: left;
+                    div{
+                        place-self: center;
+                        align-self: center;
+                        justify-self: center;
                     }
+
+                    #section_about
+                    .about_content_paragraphs{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        grid-area: paratext;
+                    }
+
+                            #section_about
+                            .about_content_paragraphs
+                            p{
+                                text-align: left;
+                                width: 75%;
+                                margin: 9px;
+                            }
         </style>
 
         <section id="section_about" class="about">
             <h1>ABOUT</h1>
-            <p id="about_content"><!--generated--></p>
+            <div id="about_content_paragraphs" class="about_content_paragraphs"><!--generated--></div>
         </section>
 
         
@@ -345,7 +370,7 @@
         <!-- ************ JAVASCRIPT POSTLOAD ************ -->
         <!-- ............................................. -->
         <script src="js/content.js"></script>
-        <script src="js/main_navbar.js"></script>
+        <!-- <script src="js/main_navbar.js"></script> -->
         <script src="js/main_about.js"></script>
         <script src="js/main_work.js"></script>
         <script src="js/main_modal.js"></script>
