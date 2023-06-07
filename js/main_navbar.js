@@ -3,6 +3,7 @@ var height_about;
 var height_projects;
 var height_contact;
 var current_section;
+const scroll_watcher = document.createElement('div');
 
 function get_sections()
 {
@@ -99,15 +100,15 @@ function viewport_return(section_return)
     }
 }
 
-get_sections();
-navbar_monitor();
+// get_sections();
+// navbar_monitor();
 
-document.addEventListener('scroll', function(){
-    navbar_monitor();
-});
+// document.addEventListener('scroll', function(){
+//     navbar_monitor();
+// });
 
-window.addEventListener('resize', function(){
-    section_return = viewport_reset();
-    get_sections();
-    viewport_return(section_return);
-});
+// window.addEventListener('resize', function(){
+//     section_return = viewport_reset();
+//     get_sections();
+//     viewport_return(section_return);
+// });
