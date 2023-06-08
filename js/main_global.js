@@ -55,7 +55,8 @@ load_contact();
 
 
 // Intersection observer for Navbar
-// https://www.youtube.com/watch?v=V-CBdlfCPic
+// NO~https://www.youtube.com/watch?v=V-CBdlfCPic~
+// https://www.youtube.com/watch?v=T8EYosX4NOo
 
 
 // ===================================
