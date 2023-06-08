@@ -26,8 +26,8 @@ section
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100svh;
-    min-height: 100vh;
+    min-height: calc(100svh - 70px);
+    min-height: calc(100vh - 70px);
     position: relative;
     text-align: center;
     background: var(--default_section_background);

@@ -5,6 +5,8 @@
         "header header"
         "paratext image";
     grid-template-columns: 1fr 1fr;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
         #section_about

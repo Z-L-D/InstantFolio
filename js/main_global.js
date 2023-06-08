@@ -5,6 +5,10 @@ const tag_animation = site_settings.site_tag_animation;
 const tag_animation_color = site_settings.site_tag_animation_color;
 const tag_animation_opacity = site_settings.site_tag_animation_opacity;
 
+const section_landing = document.getElementById('section_landing');
+const section_about = document.getElementById('section_about');
+const section_projects = document.getElementById('section_projects');
+const section_contact = document.getElementById('section_contact');
 
 
 function load_settings()

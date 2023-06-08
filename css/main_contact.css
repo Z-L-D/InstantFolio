@@ -1,5 +1,7 @@
 #section_contact{
     background-color: var(--contact_background);
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
 
         #section_contact
