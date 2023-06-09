@@ -17,10 +17,32 @@
     <!-- ******************** BODY ******************* -->
     <!-- ............................................. -->
     <body>
-        <form id="builder_form" action="/submit_form" method="post">           
-            <label for="section_form_about_text">About Text</label><br>
-            <textarea id="section_form_about_text" name="section_form_about_text" rows="20" cols="80"></textarea><br>
+        <form id="builder_form" action="/submit_form" method="post">    
+            <div>HEADER ELEMENTS</div> 
+            <label for="form_title_text">TITLE TEXT</label><br>
+            <input type="text" id="form_title_text" name="form_title_text"><br>
+
+            <label for="form_topbar_text">TOPBAR TEXT</label><br>
+            <input type="text" id="form_topbar_text" name="form_topbar_text"><br>
+
+            <br><br>
+            <div>LANDING ELEMENTS <input type="checkbox" id="landing_elements_include" name="landing_elements_include"></div>
+
+            <br><br>
+            <div>ABOUT ELEMENTS <input type="checkbox" id="about_elements_include" name="about_elements_include">
+
+                <br>
+                <label for="form_about_text">ABOUT TEXT</label><br>
+                <textarea id="form_about_text" name="form_about_text" rows="20" cols="80"></textarea><br>
+            </div>
+
+            <br><br>
+            <div>PROJECT ELEMENTS <input type="checkbox" id="project_elements_include" name="project_elements_include"></div>
             
+            <br><br>
+            <div>CONTACT ELEMENTS <input type="checkbox" id="contact_elements_include" name="contact_elements_include"></div>
+            
+            <br><br>
             <input type="submit" value="Submit">
         </form> 
     </body>

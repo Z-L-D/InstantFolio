@@ -1,3 +1,22 @@
+const site_definition = {
+    header:{
+        site_title:"[TITLE]",
+        topbar_title:"[TOPBAR TITLE]",
+    },
+    landing:{
+        include:true,
+    },
+    about:{
+        include:true,
+    },
+    projects:{
+        include:true,
+    },
+    contact:{
+        include:true,
+    }
+}
+
 var site_settings = {   
     site_title:"InstantFolio",
     topbar_title:"InstantFolio",

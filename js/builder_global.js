@@ -1,11 +1,11 @@
-const section_form_about_text = document.getElementById('section_form_about_text');
+const form_about_text = document.getElementById('form_about_text');
 
 const builder_form = document.getElementById('builder_form');
 
 builder_form.addEventListener('submit', function(event){
     event.preventDefault();
 
-    let about_text = section_form_about_text.value
+    let about_text = form_about_text.value
 
     // let builder_landing = 
 
