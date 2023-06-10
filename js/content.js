@@ -94,6 +94,7 @@ const site_definition = {
     contact:{
         include:true,
         email_hash:"[EMAIL HASH]",
+        artstation:"[ARTSTATION]",
         bandcamp:"[BANDCAMP]",
         codepen:"[CODEPEN",
         deviantart:"[DEVIANT ART",
@@ -121,6 +122,7 @@ const site_definition = {
         twitch:"[TWITCH]",
         twitter:"[TWITTER]",
         tumblr:"[TUMBLR]",
+        turbosquid:"[TURBOSQUID]",
         vimeo:"[VIMEO]",
         wikipedia:"[WIKIPEDIA]",
         youtube:"[YOUTUBE]"
@@ -144,6 +146,7 @@ var site_settings = {
            discord:"a",
            dribbble:"a",
            ello:"a",
+           envato:"[ENVATO]",
            facebook:"a",
            flickr:"a",
            github:"a",
@@ -154,6 +157,7 @@ var site_settings = {
            pinterest:"a",
            reddit:"a",
            reverbnation:"a",
+           sketchfab:"[SKETCHFAB]",
            snapchat:"a",
            sourceforge:"a",
            soundcloud:"a",
