@@ -5,12 +5,91 @@ const site_definition = {
     },
     landing:{
         include:true,
+        header:"",
+        text:"",
+        image:""
     },
     about:{
         include:true,
+        text:`Hello! I'm [NAME], a software engineer based in [CITY]. Since graduating from [COLLEGE/UNIVERSITY] in [YEAR], I've been passionate about leveraging technology to solve complex problems.
+
+        In my current role at [CURRENT JOB], I develop user-friendly software solutions, helping businesses improve their efficiency and drive innovation. I'm skilled in several programming languages, including Python, Java, and C++.
+        
+        Outside of work, I'm an avid reader and tech enthusiast who loves exploring the latest industry trends. I also enjoy hiking and spending quality time with my family and my dog, Luna.
+        
+        This website is a window into my world, showcasing my projects, my thoughts on tech trends, and some snippets of my personal life. Feel free to explore and reach out if you'd like to connect!
+        `,
+        image:"",
     },
     projects:{
         include:true,
+        animation: "pullUpDown",
+        posts:[
+            {
+                post_type:"tag1",
+                post_subtype:"tag1_subtag1",
+                post_title:"Electronic Music Playlist",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"tag2",
+                post_subtype:"",
+                post_title:"Blog 1",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"tag2",
+                post_subtype:"",
+                post_title:"Blog 2",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"tag3",
+                post_subtype:"tag3_subtag1",
+                post_title:"Classical Music Playlist",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"blog1",
+                post_subtype:"",
+                post_title:"Blog 3",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"blog2",
+                post_subtype:"tech",
+                post_title:"Blog 4",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"blog2",
+                post_subtype:"tech",
+                post_title:"Blog 5",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+            {
+                post_type:"blog2",
+                post_subtype:"science",
+                post_title:"Blog 6",
+                post_description:"",
+                post_date:"",
+                post_image:""
+            },
+        ]
     },
     contact:{
         include:true,
