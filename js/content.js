@@ -1,12 +1,12 @@
 const site_definition = {
     header:{
-        site_title:"[TITLE]",
-        topbar_title:"[TOPBAR TITLE]",
+        title:"[TITLE]",
+        topbar:"[TOPBAR TITLE]",
     },
     landing:{
         include:true,
-        header:"",
-        text:"",
+        title:"[SECTION TITLE TEXT]",
+        content:"",
         image:""
     },
     about:{
@@ -26,12 +26,15 @@ const site_definition = {
         animation: "pullUpDown",
         posts:[
             {
-                post_type:"tag1",
-                post_subtype:"tag1_subtag1",
-                post_title:"Electronic Music Playlist",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Electronic Music Playlist",
+                type:"tag1",
+                subtype:"tag1_subtag1",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
                 post_type:"tag2",
@@ -101,6 +104,7 @@ const site_definition = {
         discord:"[DISCORD]",
         dribbble:"[DRIBBBLE]",
         ello:"[ELLO]",
+        envato:"[ENVATO]",
         facebook:"[FACEBOOK]",
         flickr:"[FLICKR]",
         github:"[GITHUB]",
@@ -112,7 +116,6 @@ const site_definition = {
         pinterest:"[PINTEREST]",
         reddit:"[REDDIT]",
         reverbnation:"[REVERBNATION]",
-        snapchat:"[SNAPCHAT]",
         sourceforge:"[SOURCEFORGE]",
         soundcloud:"[SOUNDCLOUD]",
         spacehey:"[SPACEHEY]",
@@ -123,6 +126,8 @@ const site_definition = {
         twitter:"[TWITTER]",
         tumblr:"[TUMBLR]",
         turbosquid:"[TURBOSQUID]",
+        unity:"[UNITY]",
+        unreal:"[UNREAL]",
         vimeo:"[VIMEO]",
         wikipedia:"[WIKIPEDIA]",
         youtube:"[YOUTUBE]"
@@ -253,7 +258,8 @@ const post_array = [
         post_title:"Blog 6",
         post_description:"",
         post_date:"",
-        post_image:""
+        post_image:"",
+        post_license:"",
     },
 ];
 

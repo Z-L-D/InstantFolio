@@ -18,29 +18,205 @@
     <!-- ............................................. -->
     <body>
         <form id="builder_form" action="/submit_form" method="post">    
-            <div>HEADER ELEMENTS</div> 
-            <label for="form_title_text">TITLE TEXT</label><br>
-            <input type="text" id="form_title_text" name="form_title_text"><br>
+            <div>HEADER ELEMENTS
+                <br><br>
+                <label for="form_title_text">TITLE TEXT</label><br>
+                <input type="text" id="form_title_text" name="form_title_text">
 
-            <label for="form_topbar_text">TOPBAR TEXT</label><br>
-            <input type="text" id="form_topbar_text" name="form_topbar_text"><br>
+                <br><br>
+                <label for="form_topbar_text">TOPBAR TEXT</label><br>
+                <input type="text" id="form_topbar_text" name="form_topbar_text">
+            </div> 
 
-            <br><br>
-            <div>LANDING ELEMENTS <input type="checkbox" id="landing_elements_include" name="landing_elements_include"></div>
+            <br><br><br>
+            <div>LANDING ELEMENTS <input type="checkbox" id="landing_elements_include" name="landing_elements_include">
+            
+                <br><br>
+                <label for="form_section_landing_title_text">SECTION TITLE TEXT</label><br>
+                <input type="text" id="form_section_landing_title_text" name="form_section_landing_title_text" size="80">
 
-            <br><br>
-            <div>ABOUT ELEMENTS <input type="checkbox" id="about_elements_include" name="about_elements_include">
+                <br><br>
+                <label for="form_section_landing_content_text">SECTION CONTENT TEXT</label><br>
+                <textarea id="form_section_landing_content_text" name="form_section_landing_content_text" rows="20" cols="80"></textarea>
 
-                <br>
-                <label for="form_about_text">ABOUT TEXT</label><br>
-                <textarea id="form_about_text" name="form_about_text" rows="20" cols="80"></textarea><br>
+                <br><br>
+                <label for="form_section_landing_image">LANDING IMAGE</label><br>
+                <input type="text" id="form_section_landing_image" name="form_section_landing_image" size="80">
             </div>
 
-            <br><br>
-            <div>PROJECT ELEMENTS <input type="checkbox" id="project_elements_include" name="project_elements_include"></div>
+            <br><br><br>
+            <div>ABOUT ELEMENTS <input type="checkbox" id="about_elements_include" name="about_elements_include">
+
+                <br><br>
+                <label for="form_section_about_text">ABOUT TEXT</label><br>
+                <textarea id="form_section_about_text" name="form_section_about_text" rows="20" cols="80"></textarea>
+
+                <br><br>
+                <label for="form_section_about_image">ABOUT IMAGE</label><br>
+                <input type="text" id="form_section_about_image" name="form_section_about_image" size="80">
+            </div>
+
+            <br><br><br>
+            <div>PROJECT ELEMENTS <input type="checkbox" id="project_elements_include" name="project_elements_include">
+                
+                <br><br>
+                <label for="form_section_projects_title_text">SECTION TITLE TEXT</label><br>
+                <input type="text" id="form_section_projects_title_text" name="form_section_projects_title_text" size="80">
+
+                <br><br>
+                <label for="form_section_projects_card_animation">PROJECT CARD ANIMATION</label><br>
+                <input type="text" id="form_section_projects_card_animation" name="form_section_projects_card_animation" size="80">
+                
+                <br><br>
+                <input type="button" id="form_section_projects_button_add_project" value="Add Project">
+
+                <br><br>
+                <div>
+                    <br><br>
+                    <label for="form_section_projects_000_title_text">PROJECT TITLE TEXT</label><br>
+                    <input type="text" id="form_section_projects_000_title_text" name="form_section_projects_000_title_text" size="80">
+                    
+                    <br><br>
+                    <label for="form_section_projects_000_type">PROJECT TYPE</label><br>
+                    <input type="text" id="form_section_projects_000_type" name="form_section_projects_000_type" size="80">
+
+                    <br><br>
+                    <label for="form_section_projects_000_subtype">PROJECT SUBTYPE</label><br>
+                    <input type="text" id="form_section_projects_000_subtype" name="form_section_projects_000_subtype" size="80">
+
+                    <br><br>
+                    <label for="form_section_projects_000_description_text">PROJECT DESCRIPTION TEXT</label><br>
+                    <textarea id="form_section_projects_000_description_text" name="form_section_projects_000_description_text" rows="20" cols="80"></textarea>
+
+                    <br><br>
+                    <label for="form_section_projects_000_content_text">PROJECT CONTENT TEXT</label><br>
+                    <textarea id="form_section_projects_000_content_text" name="form_section_projects_000_content_text" rows="20" cols="80"></textarea>
+
+                    <br><br>
+                    <label for="form_section_projects_000_date">PROJECT DATE</label><br>
+                    <input type="text" id="form_section_projects_000_date" name="form_section_projects_000_date" size="80">
+                
+                    <br><br>
+                    <label for="form_section_projects_000_image">PROJECT IMAGE</label><br>
+                    <input type="text" id="form_section_projects_000_image" name="form_section_projects_000_image" size="80">
+
+                    <br><br>
+                    <label for="form_section_projects_000_license">PROJECT LICENSE</label><br>
+                    <input type="text" id="form_section_projects_000_license" name="form_section_projects_000_license" size="80">
+
+                    <br><br>
+                    <label for="form_section_projects_000_sharing">ENABLE SHARING</label><br>
+                    <input type="checkbox" id="form_section_projects_000_sharing" name="form_section_projects_000_sharing">
+                
+                </div>
+            </div>
             
             <br><br>
-            <div>CONTACT ELEMENTS <input type="checkbox" id="contact_elements_include" name="contact_elements_include"></div>
+            <div>CONTACT ELEMENTS <input type="checkbox" id="contact_elements_include" name="contact_elements_include">
+                
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_email" value="Add Email Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_artstation" value="Add Artstation Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_bandcamp" value="Add Bandcamp Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_codepen" value="Add Codepen Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_deviantart" value="Add DeviantArt Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_discord" value="Add Discord Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_dribbble" value="Add Dribbble Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_ello" value="Add Ello Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_envato" value="Add Envato Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_facebook" value="Add Facebook Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_flickr" value="Add Flickr Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_github" value="Add Github Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_hackadayio" value="Add Hackaday.IO Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_instagram" value="Add Instagram Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_linkedin" value="Add LinkedIn Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_mastodon" value="Add Mastodon Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_pinterest" value="Add Pinterest Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_reddit" value="Add Reddit Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_reverbnation" value="Add Reverb Nation Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_sourceforge" value="Add SourceForge Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_soundcloud" value="Add SoundCloud Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_spacehey" value="Add SpaceHey Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_stackoverflow" value="Add Stack Overflow Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_steam" value="Add Steam Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_tiktok" value="Add TikTok Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_twitch" value="Add Twitch Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_twitter" value="Add Twitter Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_tumblr" value="Add Tumblr Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_turbosquid" value="Add TurboSquid Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_unity" value="Add Unity Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_unreal" value="Add Unreal Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_vimeo" value="Add Vimeo Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_wikipedia" value="Add Wikipedia Account">
+
+                <br><br>
+                <input type="button" id="form_section_contact_button_add_youtube" value="Add Youtube Account">
+            
+            </div>
             
             <br><br>
             <input type="submit" value="Submit">
