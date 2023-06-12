@@ -21,7 +21,7 @@ This website is a window into my world, showcasing my projects, my thoughts on t
         `,
         image:"",
     },
-    projects:{
+    work:{
         include:true,
         title:"[SECTION TITLE TEXT]",
         animation: "pullUpDown",
@@ -141,7 +141,7 @@ var site_settings = {
     site_subtitle:"",
     site_description:"",
     site_section_about:true,
-    site_section_projects:true,
+    site_section_work:true,
     site_section_contact:true,
     site_contact_email: "Email Push", // ["Email Push"]
     site_contact_socialmedia:
@@ -194,7 +194,7 @@ Outside of work, I'm an avid reader and tech enthusiast who loves exploring the 
 This website is a window into my world, showcasing my projects, my thoughts on tech trends, and some snippets of my personal life. Feel free to explore and reach out if you'd like to connect!
 `];
 
-const header_projects = "Projects";
+const header_work = "work";
 
 const post_array = [
     {

@@ -1,11 +1,11 @@
-function projects_load(){
-    project_elements_include.checked = site_definition.projects.include;
-    form_section_projects_title_text.value = site_definition.projects.title;
-    form_section_projects_card_animation.value = site_definition.projects.animation;
+function work_load(){
+    work_elements_include.checked = site_definition.work.include;
+    form_section_work_title_text.value = site_definition.work.title;
+    form_section_work_card_animation.value = site_definition.work.animation;
 
-    check_include(project_elements_include, form_section_projects);
+    check_include(work_elements_include, form_section_work);
 
-    project_elements_include.addEventListener('click', function(){
-        check_include(project_elements_include, form_section_projects);
+    work_elements_include.addEventListener('click', function(){
+        check_include(work_elements_include, form_section_work);
     });
 }

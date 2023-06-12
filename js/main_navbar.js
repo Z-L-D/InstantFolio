@@ -1,6 +1,6 @@
 var height_window;
 var height_about;
-var height_projects;
+var height_work;
 var height_contact;
 var current_section;
 
@@ -13,9 +13,9 @@ function get_sections()
     height_about = height_about.y;
     height_about = height_about - 70;
 
-    height_projects = document.getElementById("section_projects").getBoundingClientRect();
-    height_projects = height_projects.y;
-    height_projects = height_projects - 70;
+    height_work = document.getElementById("section_work").getBoundingClientRect();
+    height_work = height_work.y;
+    height_work = height_work - 70;
 
     height_contact = document.getElementById("section_contact").getBoundingClientRect();
     height_contact = height_contact.y;
@@ -35,7 +35,7 @@ function navbar_monitor()
     }
 
 
-    if(window.scrollY > height_about && window.scrollY < height_projects)
+    if(window.scrollY > height_about && window.scrollY < height_work)
     {
         document.getElementById('tab_about').classList.replace('item', 'item_select');
         current_section = "about"
@@ -46,14 +46,14 @@ function navbar_monitor()
     }
 
 
-    if(window.scrollY > height_projects && window.scrollY < height_contact)
+    if(window.scrollY > height_work && window.scrollY < height_contact)
     {
-        document.getElementById('tab_projects').classList.replace('item', 'item_select');
-        current_section = "projects"
+        document.getElementById('tab_work').classList.replace('item', 'item_select');
+        current_section = "work"
     }
     else
     {
-        document.getElementById('tab_projects').classList.replace('item_select', 'item');
+        document.getElementById('tab_work').classList.replace('item_select', 'item');
     }
 
 
@@ -88,8 +88,8 @@ function viewport_return(section_return)
         case "about":
             window.scrollTo(0, height_about + 70);
             break;
-        case "projects":
-            window.scrollTo(0, height_projects + 70);
+        case "work":
+            window.scrollTo(0, height_work + 70);
             break;
         case "contact":
             window.scrollTo(0, height_contact + 70);

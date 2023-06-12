@@ -16,9 +16,9 @@ const form_button_submit = document.getElementById('form_button_submit');
         site_definition.about.text = form_section_about_text.value;
         site_definition.about.image = form_section_about_image.value;
 
-        site_definition.projects.include = project_elements_include.checked;
-        site_definition.projects.title = form_section_projects_title_text.value;
-        site_definition.projects.animation = form_section_projects_card_animation.value;
+        site_definition.work.include = work_elements_include.checked;
+        site_definition.work.title = form_section_work_title_text.value;
+        site_definition.work.animation = form_section_work_card_animation.value;
 
         site_definition.contact.include = contact_elements_include.value;   
         
@@ -61,11 +61,11 @@ const form_section_about_text = document.getElementById('form_section_about_text
 const form_section_about_image = document.getElementById('form_section_about_image');
 about_load();
 
-const form_section_projects = document.getElementById('form_section_projects');
-const project_elements_include = document.getElementById('project_elements_include');
-const form_section_projects_title_text = document.getElementById('form_section_projects_title_text');
-const form_section_projects_card_animation = document.getElementById('form_section_projects_card_animation');
-projects_load();
+const form_section_work = document.getElementById('form_section_work');
+const work_elements_include = document.getElementById('work_elements_include');
+const form_section_work_title_text = document.getElementById('form_section_work_title_text');
+const form_section_work_card_animation = document.getElementById('form_section_work_card_animation');
+work_load();
 
 const form_section_contact = document.getElementById('form_section_contact');
 const contact_elements_include = document.getElementById('contact_elements_include');
@@ -484,7 +484,7 @@ function define_page_template(content){
         <div id="navbar" class="navbar_top">
             <a id="tab_welcome" class="item" href="#section_landing">HOME</a>
             <a id="tab_about" class="item" href="#section_about">ABOUT</a>
-            <a id="tab_projects" class="item" href="#section_projects"><!--generated--></a>
+            <a id="tab_work" class="item" href="#section_work"><!--generated--></a>
             <a id="tab_contact" class="item" href="#section_contact">CONTACT</a>
         </div>        
 
@@ -495,20 +495,20 @@ function define_page_template(content){
 
         
         <style>
-            #section_projects
+            #section_work
             {
                 background-color: var(--portfolio_background);
                 padding-top: 70px;
                 padding-bottom: 70px;
             }
 
-                    #section_projects
+                    #section_work
                     h1
                     {
                         color:var(--portfolio_h1_text_color);
                     }
                 
-                    #section_projects
+                    #section_work
                     .tags
                     {
                         display: flex;
@@ -519,7 +519,7 @@ function define_page_template(content){
                         color:var(--portfolio_tags_text_color);
                     }
                 
-                            #section_projects
+                            #section_work
                             .tags
                             .item
                             {
@@ -530,14 +530,14 @@ function define_page_template(content){
                                 position: relative;
                             }
                         
-                                    #section_projects
+                                    #section_work
                                     .tags
                                     .item:hover
                                     {
                                         cursor: pointer;
                                     }
                                 
-                    #section_projects
+                    #section_work
                     .row
                     {
                         display: flex;
@@ -549,7 +549,7 @@ function define_page_template(content){
                         flex-direction: row-reverse;
                     }
                 
-                            #section_projects
+                            #section_work
                             .row
                             .item
                             {
@@ -566,14 +566,14 @@ function define_page_template(content){
                                 background-color: var(--item_background);
                             }
                         
-                                    #section_projects
+                                    #section_work
                                     .row
                                     .item:hover
                                     {
                                         cursor: pointer;
                                     }
                                 
-                                    #section_projects
+                                    #section_work
                                     .row
                                     .item
                                     .card
@@ -586,7 +586,7 @@ function define_page_template(content){
                                         padding: 1vw 1vw;
                                     }
                                 
-                                            #section_projects
+                                            #section_work
                                             .row
                                             .item
                                             .card
@@ -605,7 +605,7 @@ function define_page_template(content){
                                                 transition: left 0.4s;
                                             }
                                         
-                                            #section_projects
+                                            #section_work
                                             .row
                                             .item:hover
                                             .card
@@ -614,7 +614,7 @@ function define_page_template(content){
                                                 left: -33%;
                                             }
                                         
-                                            #section_projects
+                                            #section_work
                                             .row
                                             .item
                                             .card
@@ -625,7 +625,7 @@ function define_page_template(content){
                                                 flex-direction: column;
                                             }
                                         
-                                                    #section_projects
+                                                    #section_work
                                                     .row
                                                     .item
                                                     .card
@@ -642,7 +642,7 @@ function define_page_template(content){
                                                         text-transform: uppercase;
                                                     }
                                                 
-                                                    #section_projects
+                                                    #section_work
                                                     .row
                                                     .item
                                                     .text
@@ -658,7 +658,7 @@ function define_page_template(content){
                                                         color: var(--item_text_color);
                                                     }
                                                 
-                                                            #section_projects
+                                                            #section_work
                                                             .row
                                                             .item:hover
                                                             .text
@@ -668,7 +668,7 @@ function define_page_template(content){
                                                                 opacity: 0.9;
                                                             }
                                                         
-                                                    #section_projects
+                                                    #section_work
                                                     .row
                                                     .item
                                                     .text
@@ -683,7 +683,7 @@ function define_page_template(content){
                                                         word-break:break-all;
                                                     }
                                                 
-                    #section_projects
+                    #section_work
                     .modal
                     {
                         position: fixed;
@@ -697,14 +697,14 @@ function define_page_template(content){
                         background-color: var(--modal_background)
                     }
                 
-                    #section_projects
+                    #section_work
                     .modal_show
                     {
                         top:0px;
                         transition: top 0.3s;
                     }
                 
-                    #section_projects
+                    #section_work
                     .modal
                     .box
                     {
@@ -724,8 +724,8 @@ function define_page_template(content){
                     }
         </style>
 
-        <section id="section_projects" class="portfolio">
-            <h1 id="projects_header"><!--generated--></h1>
+        <section id="section_work" class="portfolio">
+            <h1 id="work_header"><!--generated--></h1>
             <div id="tags" class="tags"><!--generated--></div>
             <div id="subtags"><!--generated--></div>
             <div id="posts" class="row"><!--generated--></div>
@@ -778,7 +778,7 @@ function define_page_template(content){
         // NAVBAR
             var height_window;
             var height_about;
-            var height_projects;
+            var height_work;
             var height_contact;
             var current_section;
 
@@ -791,9 +791,9 @@ function define_page_template(content){
                 height_about = height_about.y;
                 height_about = height_about - 70;
             
-                height_projects = document.getElementById("section_projects").getBoundingClientRect();
-                height_projects = height_projects.y;
-                height_projects = height_projects - 70;
+                height_work = document.getElementById("section_work").getBoundingClientRect();
+                height_work = height_work.y;
+                height_work = height_work - 70;
             
                 height_contact = document.getElementById("section_contact").getBoundingClientRect();
                 height_contact = height_contact.y;
@@ -813,7 +813,7 @@ function define_page_template(content){
                 }
             
             
-                if(window.scrollY > height_about && window.scrollY < height_projects)
+                if(window.scrollY > height_about && window.scrollY < height_work)
                 {
                     document.getElementById('tab_about').classList.replace('item', 'item_select');
                     current_section = "about"
@@ -824,14 +824,14 @@ function define_page_template(content){
                 }
             
             
-                if(window.scrollY > height_projects && window.scrollY < height_contact)
+                if(window.scrollY > height_work && window.scrollY < height_contact)
                 {
-                    document.getElementById('tab_projects').classList.replace('item', 'item_select');
-                    current_section = "projects"
+                    document.getElementById('tab_work').classList.replace('item', 'item_select');
+                    current_section = "work"
                 }
                 else
                 {
-                    document.getElementById('tab_projects').classList.replace('item_select', 'item');
+                    document.getElementById('tab_work').classList.replace('item_select', 'item');
                 }
             
             
@@ -866,8 +866,8 @@ function define_page_template(content){
                     case "about":
                         window.scrollTo(0, height_about + 70);
                         break;
-                    case "projects":
-                        window.scrollTo(0, height_projects + 70);
+                    case "work":
+                        window.scrollTo(0, height_work + 70);
                         break;
                     case "contact":
                         window.scrollTo(0, height_contact + 70);
@@ -914,7 +914,7 @@ function define_page_template(content){
                 };
             };
 
-        // PROJECTS
+        // WORK
             function load_work(){
                 let post_types = ['All'];
                 let post_file;
@@ -1072,7 +1072,7 @@ function define_page_template(content){
                 };
             };
 
-            // PROJECT MODAL
+            // WORK MODAL
                 function load_modal(post_number)
                 {
                     console.log("post number: " + post_number)
@@ -1193,7 +1193,7 @@ function define_page_template(content){
 
                 const section_landing = document.getElementById('section_landing');
                 const section_about = document.getElementById('section_about');
-                const section_projects = document.getElementById('section_projects');
+                const section_work = document.getElementById('section_work');
                 const section_contact = document.getElementById('section_contact');
 
 
@@ -1203,8 +1203,8 @@ function define_page_template(content){
                         document.getElementById("site_title").innerHTML = site_settings.site_title;
                     }
                 
-                    document.getElementById('tab_projects').innerHTML = header_projects.toLocaleUpperCase();
-                    document.getElementById('projects_header').innerHTML = header_projects.toLocaleUpperCase();
+                    document.getElementById('tab_work').innerHTML = header_work.toLocaleUpperCase();
+                    document.getElementById('work_header').innerHTML = header_work.toLocaleUpperCase();
                 }
 
                 function base64Encode(input) {

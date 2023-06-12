@@ -7,7 +7,7 @@ const tag_animation_opacity = site_settings.site_tag_animation_opacity;
 
 const section_landing = document.getElementById('section_landing');
 const section_about = document.getElementById('section_about');
-const section_projects = document.getElementById('section_projects');
+const section_work = document.getElementById('section_work');
 const section_contact = document.getElementById('section_contact');
 
 
@@ -17,8 +17,8 @@ function load_settings()
         document.getElementById("site_title").innerHTML = site_settings.site_title;
     }
 
-    document.getElementById('tab_projects').innerHTML = header_projects.toLocaleUpperCase();
-    document.getElementById('projects_header').innerHTML = header_projects.toLocaleUpperCase();
+    document.getElementById('tab_work').innerHTML = header_work.toLocaleUpperCase();
+    document.getElementById('work_header').innerHTML = header_work.toLocaleUpperCase();
 }
 
 function base64Encode(input) {

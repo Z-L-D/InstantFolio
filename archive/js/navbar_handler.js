@@ -13,7 +13,7 @@ function get_sections()
     height_about = height_about.y;
     height_about = height_about - 70;
 
-    height_work = document.getElementById("section_projects").getBoundingClientRect();
+    height_work = document.getElementById("section_work").getBoundingClientRect();
     height_work = height_work.y;
     height_work = height_work - 70;
 
