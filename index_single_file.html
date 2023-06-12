@@ -1,81 +1,3 @@
-const builder_form = document.getElementById('builder_form');
-
-// function form_submit(){
-    builder_form.addEventListener('submit', function(event){
-        event.preventDefault();
-    
-        site_definition.header.title = form_header_title_text.value;
-        site_definition.header.topbar = form_header_topbar_text.value;
-
-        site_definition.landing.include = landing_elements_include.checked;
-        site_definition.landing.title = form_section_landing_title_text.value;
-        site_definition.landing.content = form_section_landing_content_text.value;
-        site_definition.landing.image = form_section_landing_image.value;  
-        
-        site_definition.about.include = about_elements_include.checked;
-        site_definition.about.text = form_section_about_text.value;
-        site_definition.about.image = form_section_about_image.value;
-
-        site_definition.projects.include = project_elements_include.checked;
-        site_definition.projects.title = form_section_projects_title_text.value;
-        site_definition.projects.animation = form_section_projects_card_animation.value;
-
-        site_definition.contact.include = contact_elements_include.value;   
-        
-        define_page_template(`const site_definition = ${JSON.stringify(site_definition)}`)
-
-        let file_builder = page_template;
-
-        let file_builder_blob = new Blob([file_builder], { type: "text/plain" });
-        let downloadLink = document.createElement("a");
-        
-        downloadLink.href = URL.createObjectURL(file_builder_blob);
-        downloadLink.download = "content.html";
-        downloadLink.click();
-    });
-// }
-
-function check_include(check, section){
-    if(check.checked === true){
-        section.setAttribute('open', '');
-    }
-    else{
-        section.removeAttribute('open', '');
-    }
-}
-
-const form_header_title_text = document.getElementById('form_header_title_text');
-const form_header_topbar_text = document.getElementById('form_header_topbar_text');
-header_load();
-
-const form_section_landing = document.getElementById('form_section_landing');
-const landing_elements_include = document.getElementById('landing_elements_include');
-const form_section_landing_title_text = document.getElementById('form_section_landing_title_text');
-const form_section_landing_content_text = document.getElementById('form_section_landing_content_text');
-const form_section_landing_image = document.getElementById('form_section_landing_image'); 
-landing_load();
-
-const form_section_about = document.getElementById('form_section_about');
-const about_elements_include = document.getElementById('about_elements_include');
-const form_section_about_text = document.getElementById('form_section_about_text');
-const form_section_about_image = document.getElementById('form_section_about_image');
-about_load();
-
-const form_section_projects = document.getElementById('form_section_projects');
-const project_elements_include = document.getElementById('project_elements_include');
-const form_section_projects_title_text = document.getElementById('form_section_projects_title_text');
-const form_section_projects_card_animation = document.getElementById('form_section_projects_card_animation');
-projects_load();
-
-const form_section_contact = document.getElementById('form_section_contact');
-const contact_elements_include = document.getElementById('contact_elements_include');
-const form_section_contact_button_add_email = document.getElementById('form_section_contact_button_add_email');
-contact_load();
-
-let page_template 
-
-function define_page_template(content){
-    page_template = `
 <!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="description" content="A knowledgable designer, programmer, engineer and fabricator ready to bring your dream product into reality.">
@@ -772,9 +694,6 @@ function define_page_template(content){
     <!-- ************ JAVASCRIPT POSTLOAD ************ -->
     <!-- ............................................. -->
     <script>
-        //CONTENT
-        ${content}
-
         // NAVBAR
             var height_window;
             var height_about;
@@ -893,23 +812,23 @@ function define_page_template(content){
             function load_about(){
                 const about_content_paragraphs = document.getElementById('about_content_paragraphs')
 
-                const about_paragraphs = content_about[0].split(/\\n\s*\\n/);
+                const about_paragraphs = content_about[0].split(/\n\s*\n/);
 
                 for(let i = 0; i < about_paragraphs.length; i++){
-                    about_content_paragraphs.innerHTML += \`<p>\${about_paragraphs[i]}</p>\`
+                    about_content_paragraphs.innerHTML += `<p>${about_paragraphs[i]}</p>`
                 }
             
                 if(content_about.length === 2){
-                    document.getElementById('section_about').style.gridTemplateAreas = \`
+                    document.getElementById('section_about').style.gridTemplateAreas = `
                         "header header"
                         "paratext image"
-                    \`;
+                    `;
                 }
                 else if(content_about.length < 2){
-                    document.getElementById('section_about').style.gridTemplateAreas = \`
+                    document.getElementById('section_about').style.gridTemplateAreas = `
                         "header header"
                         "paratext paratext"
-                    \`;
+                    `;
                     document.getElementById('about_content_paragraphs').style.width = "50%";
                 };
             };
@@ -927,24 +846,24 @@ function define_page_template(content){
                 
                     //load posts
                     post_file = post_array[i].post_title.replace(/ /g, "_");
-                    document.getElementById("posts").insertAdjacentHTML('beforeend', \`
-                            <a class="item post \${post_array[i].post_type} \${post_array[i].post_subtype}" data="\${post_file}" index="\${i}" type="\${post_array[i].post_type}" subtype="\${post_array[i].post_subtype}">
+                    document.getElementById("posts").insertAdjacentHTML('beforeend', `
+                            <a class="item post ${post_array[i].post_type} ${post_array[i].post_subtype}" data="${post_file}" index="${i}" type="${post_array[i].post_type}" subtype="${post_array[i].post_subtype}">
                                 <div class="card">
-                                    <div class="card_background" style="background-image: url('img/\${post_array[i].post_type}/\${post_array[i].post_title}/\${post_array[i].post_title}--th.jpg')"></div>
+                                    <div class="card_background" style="background-image: url('img/${post_array[i].post_type}/${post_array[i].post_title}/${post_array[i].post_title}--th.jpg')"></div>
                                     <div class="text">
-                                        <div class="card_title">\${post_array[i].post_title}</div>
-                                        <div class="description"><p class="text">\${post_array[i].post_description}<br>\${post_array[i].post_type}</p></div>
+                                        <div class="card_title">${post_array[i].post_title}</div>
+                                        <div class="description"><p class="text">${post_array[i].post_description}<br>${post_array[i].post_type}</p></div>
                                     </div>
                                 </div>
                             </a>
-                    \`);
+                    `);
                 };
             
                 //load tags
                 for(let i = 0; i < post_types.length; i++){
-                    document.getElementById("tags").insertAdjacentHTML('beforeend', \`
-                        <a class="item tag \${tag_animation}" type="\${post_types[i]}"><div>\${post_types[i].toUpperCase()}</div></a>
-                    \`);
+                    document.getElementById("tags").insertAdjacentHTML('beforeend', `
+                        <a class="item tag ${tag_animation}" type="${post_types[i]}"><div>${post_types[i].toUpperCase()}</div></a>
+                    `);
                 };
             
                 //init tag buttons
@@ -1000,9 +919,9 @@ function define_page_template(content){
                 }
                 else{
                     for(let i = 0; i < post_subtypes.length; i++){
-                        document.getElementById("subtags").insertAdjacentHTML('beforeend', \`
-                            <a class="item subtag \${tag_animation}" subtype="\${post_subtypes[i]}"><div>\${post_subtypes[i].toUpperCase()}</div></a>
-                        \`);
+                        document.getElementById("subtags").insertAdjacentHTML('beforeend', `
+                            <a class="item subtag ${tag_animation}" subtype="${post_subtypes[i]}"><div>${post_subtypes[i].toUpperCase()}</div></a>
+                        `);
                     };
                 };
             
@@ -1076,22 +995,22 @@ function define_page_template(content){
                 function load_modal(post_number)
                 {
                     console.log("post number: " + post_number)
-                    document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', \`
-                            \${post_array[post_number].post_title}
+                    document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
+                            ${post_array[post_number].post_title}
                             <br>
-                            \${post_array[post_number].post_description}
-                    \`);
+                            ${post_array[post_number].post_description}
+                    `);
                     if(post_array[post_number].post_subtype.length > 0){
-                        document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', \`
+                        document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
                             <br>
-                            \${post_array[post_number].post_type} > \${post_array[post_number].post_subtype}
-                        \`);
+                            ${post_array[post_number].post_type} > ${post_array[post_number].post_subtype}
+                        `);
                     }
                     else{
-                        document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', \`
+                        document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
                             <br>
-                            \${post_array[post_number].post_type}
-                        \`);
+                            ${post_array[post_number].post_type}
+                        `);
                     };
                     document.getElementById("post_modal").classList.add("modal_show");
                 }
@@ -1107,16 +1026,16 @@ function define_page_template(content){
                 userlink = userlink.replace("@@REPLACE@@", site_settings.site_contact_socialmedia[websiteid]);
                 if(site_settings.site_contact_socialmedia[websiteid] != "")
                 {
-                    document.querySelector(".contact_content_socialmedia_buttons").insertAdjacentHTML('beforeend', \`
-                        <a class="contact_content_socialmedia_buttons_button" href="\${userlink}">
+                    document.querySelector(".contact_content_socialmedia_buttons").insertAdjacentHTML('beforeend', `
+                        <a class="contact_content_socialmedia_buttons_button" href="${userlink}">
                             <div class="contact_content_socialmedia_buttons_logo">
-                                <svg width="32" height="32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="\${viewbox}">
-                                    <path d="\${symbol}"></path>
+                                <svg width="32" height="32" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="${viewbox}">
+                                    <path d="${symbol}"></path>
                                 </svg>
                             </div>
-                            <span class="contact_content_socialmedia_buttons_text">\${websitename}</span>
+                            <span class="contact_content_socialmedia_buttons_text">${websitename}</span>
                         </a>
-                    \`)
+                    `)
                 }
             }
 
@@ -1135,7 +1054,7 @@ function define_page_template(content){
                         const email_form_name = document.getElementById('contact_content_email_form_name').value;
                         const email_form_email = document.getElementById('contact_content_email_form_email').value;
                         const email_form_message = document.getElementById('contact_content_email_form_message').value;
-                        const email_form_subject = \`Enquiry from \${email_form_name}\`
+                        const email_form_subject = `Enquiry from ${email_form_name}`
                         const email_form_emailto = "test@test.com" //define this in settings !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     
                         const email_encrypt = base64Encode(email_form_emailto);
@@ -1144,7 +1063,7 @@ function define_page_template(content){
                         console.log(email_encrypt);
                         console.log(email_decrypt);
                     
-                        // window.open(\`mailto:\${email_form_emailto}?subject=\${email_form_subject}&body=Name: \${email_form_name}%0D%0AEmail: \${email_form_email}%0D%0A%0D%0A\${email_form_message}\`);
+                        // window.open(`mailto:${email_form_emailto}?subject=${email_form_subject}&body=Name: ${email_form_name}%0D%0AEmail: ${email_form_email}%0D%0A%0D%0A${email_form_message}`);
                     });
                 
                     const social_media_list = [ {id:"bandcamp",         name:"bandcamp",        userlink:"https://@@REPLACE@@.bandcamp.com",                sharelink:"",       symbol:"M0 18.75l7.437-13.5H24l-7.438 13.5H0z", viewbox: "0 0 24 24"},
@@ -1240,4 +1159,3 @@ function define_page_template(content){
                 load_contact();
     </script>   
 </html>
-`};

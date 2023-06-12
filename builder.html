@@ -21,16 +21,16 @@
             <details open>
                 <summary>HEADER ELEMENTS</summary>
 
-                <label for="form_title_text">TITLE TEXT</label><br>
-                <input type="text" id="form_title_text" name="form_title_text">
+                <label for="form_header_title_text">TITLE TEXT</label><br>
+                <input type="text" id="form_header_title_text" name="form_header_title_text">
 
                 <br><br>
-                <label for="form_topbar_text">TOPBAR TEXT</label><br>
-                <input type="text" id="form_topbar_text" name="form_topbar_text">
+                <label for="form_header_topbar_text">TOPBAR TEXT</label><br>
+                <input type="text" id="form_header_topbar_text" name="form_header_topbar_text">
             </details> 
 
             <br>
-            <details>
+            <details id="form_section_landing">
                 <summary><input type="checkbox" id="landing_elements_include" name="landing_elements_include">LANDING ELEMENTS </summary>
                 <label for="form_section_landing_title_text">SECTION TITLE TEXT</label><br>
                 <input type="text" id="form_section_landing_title_text" name="form_section_landing_title_text" size="80">
@@ -45,7 +45,7 @@
             </details>
 
             <br>
-            <details>
+            <details id="form_section_about">
                 <summary><input type="checkbox" id="about_elements_include" name="about_elements_include">ABOUT ELEMENTS</summary>
 
                 <label for="form_section_about_text">ABOUT TEXT</label><br>
@@ -57,7 +57,7 @@
             </details>
 
             <br>
-            <details>
+            <details id="form_section_projects">
                 <summary><input type="checkbox" id="project_elements_include" name="project_elements_include">PROJECT ELEMENTS</summary>
 
                 <label for="form_section_projects_title_text">SECTION TITLE TEXT</label><br>
@@ -70,7 +70,7 @@
                 <br><br>
                 <input type="button" id="form_section_projects_button_add_project" value="Add Project">
 
-                <br><br>
+                <!-- <br><br>
                 <div>
                     <br><br>
                     <label for="form_section_projects_000_title_text">PROJECT TITLE TEXT</label><br>
@@ -108,17 +108,17 @@
                     <label for="form_section_projects_000_sharing">ENABLE SHARING</label><br>
                     <input type="checkbox" id="form_section_projects_000_sharing" name="form_section_projects_000_sharing">
                 
-                </div>
+                </div> -->
             </details>
             
             <br>
-            <details>
+            <details id="form_section_contact">
                 <summary><input type="checkbox" id="contact_elements_include" name="contact_elements_include">CONTACT ELEMENTS</summary>
                 
                 <br><br>
                 <input type="button" id="form_section_contact_button_add_email" value="Add Email Account">
 
-                <br><br>
+                <!-- <br><br>
                 <input type="button" id="form_section_contact_button_add_artstation" value="Add Artstation Account">
 
                 <br><br>
@@ -215,9 +215,9 @@
                 <input type="button" id="form_section_contact_button_add_wikipedia" value="Add Wikipedia Account">
 
                 <br><br>
-                <input type="button" id="form_section_contact_button_add_youtube" value="Add Youtube Account">
+                <input type="button" id="form_section_contact_button_add_youtube" value="Add Youtube Account"> -->
             
-            </div>
+            </details>
             
             <br><br>
             <input type="submit" value="Submit">
@@ -229,7 +229,11 @@
     <!-- ************* JAVASCRIPT POSTLOAD ************ -->
     <!-- ............................................. -->
     <script src="js/content.js"></script>
+    <script src="js/builder_header.js"></script>
+    <script src="js/builder_landing.js"></script>
     <script src="js/builder_about.js"></script>
+    <script src="js/builder_projects.js"></script>
+    <script src="js/builder_contact.js"></script>
     <script src="js/builder_global.js"></script>
     
 </html>
