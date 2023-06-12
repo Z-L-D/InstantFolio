@@ -2,7 +2,7 @@ const builder_form = document.getElementById('builder_form');
 
 // function form_submit(){
     builder_form.addEventListener('submit', function(event){
-        event.preventDefault();
+        // event.preventDefault();
     
         site_definition.header.title = form_header_title_text.value;
         site_definition.header.topbar = form_header_topbar_text.value;

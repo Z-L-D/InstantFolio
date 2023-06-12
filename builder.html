@@ -11,61 +11,115 @@
         <!-- ******************** CSS ******************** -->
         <!-- ............................................. -->
         <link rel="stylesheet" href="" />
+
+        <style>
+            body {
+                height: 100%;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                /* align-items: center; */
+                background: linear-gradient(to right, rgb(0, 102, 255), rgb(28, 0, 130));
+                /* font-family: Arial, sans-serif; */
+            }           
+
+            details {
+                width: 50%;
+                margin: 1em auto;
+                padding: 1em;
+                background: #fff;
+                box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+                box-sizing: border-box;
+                border-radius: 5px;
+            }           
+
+            details input[type="text"], 
+            details textarea {
+                width: 100%;
+                padding: 0.5em;
+                border: 1px solid #ddd;
+                box-sizing: border-box;
+                margin: 0.5em 0;
+            }           
+
+            details label {
+                display: block;
+                margin-bottom: 0.5em;
+                font-weight: bold;
+            }           
+
+            details summary {
+                font-weight: bold;
+                cursor: pointer;
+                margin-bottom: 1em;
+                font-size: 1.5em
+            }
+
+            details input[type="button"]{
+                width: 100%;
+                padding: 0.5em;
+                border: 1px solid #ddd;
+                box-sizing: border-box;
+                margin: 0.5em 0;
+            }  
+        </style>
     </head>
 
     <!-- ''''''''''''''''''''''''''''''''''''''''''''' -->
     <!-- ******************** BODY ******************* -->
     <!-- ............................................. -->
     <body>
-        <form id="builder_form" action="/submit_form" method="post">    
+        <!-- <form id="builder_form" action="/submit_form" method="post">     -->
             <details open>
                 <summary>HEADER ELEMENTS</summary>
 
-                <label for="form_header_title_text">TITLE TEXT</label><br>
+                <label for="form_header_title_text">TITLE TEXT</label>
                 <input type="text" id="form_header_title_text" name="form_header_title_text">
 
                 <br><br>
-                <label for="form_header_topbar_text">TOPBAR TEXT</label><br>
+                <label for="form_header_topbar_text">TOPBAR TEXT</label>
                 <input type="text" id="form_header_topbar_text" name="form_header_topbar_text">
             </details> 
 
             <br>
             <details id="form_section_landing">
                 <summary><input type="checkbox" id="landing_elements_include" name="landing_elements_include">LANDING ELEMENTS </summary>
-                <label for="form_section_landing_title_text">SECTION TITLE TEXT</label><br>
-                <input type="text" id="form_section_landing_title_text" name="form_section_landing_title_text" size="80">
+                
+                <label for="form_section_landing_title_text">SECTION TITLE TEXT</label>
+                <input type="text" id="form_section_landing_title_text" name="form_section_landing_title_text">
 
                 <br><br>
-                <label for="form_section_landing_content_text">SECTION CONTENT TEXT</label><br>
-                <textarea id="form_section_landing_content_text" name="form_section_landing_content_text" rows="20" cols="80"></textarea>
+                <label for="form_section_landing_content_text">SECTION CONTENT TEXT</label>
+                <textarea id="form_section_landing_content_text" name="form_section_landing_content_text"></textarea>
 
                 <br><br>
-                <label for="form_section_landing_image">LANDING IMAGE</label><br>
-                <input type="text" id="form_section_landing_image" name="form_section_landing_image" size="80">
+                <label for="form_section_landing_image">LANDING IMAGE</label>
+                <input type="text" id="form_section_landing_image" name="form_section_landing_image">
             </details>
 
             <br>
             <details id="form_section_about">
                 <summary><input type="checkbox" id="about_elements_include" name="about_elements_include">ABOUT ELEMENTS</summary>
 
-                <label for="form_section_about_text">ABOUT TEXT</label><br>
-                <textarea id="form_section_about_text" name="form_section_about_text" rows="20" cols="80"></textarea>
+                <label for="form_section_about_text">ABOUT TEXT</label>
+                <textarea id="form_section_about_text" name="form_section_about_text"></textarea>
 
                 <br><br>
-                <label for="form_section_about_image">ABOUT IMAGE</label><br>
-                <input type="text" id="form_section_about_image" name="form_section_about_image" size="80">
+                <label for="form_section_about_image">ABOUT IMAGE</label>
+                <input type="text" id="form_section_about_image" name="form_section_about_image">
             </details>
 
             <br>
             <details id="form_section_projects">
                 <summary><input type="checkbox" id="project_elements_include" name="project_elements_include">PROJECT ELEMENTS</summary>
 
-                <label for="form_section_projects_title_text">SECTION TITLE TEXT</label><br>
-                <input type="text" id="form_section_projects_title_text" name="form_section_projects_title_text" size="80">
+                <label for="form_section_projects_title_text">SECTION TITLE TEXT</label>
+                <input type="text" id="form_section_projects_title_text" name="form_section_projects_title_text">
 
                 <br><br>
-                <label for="form_section_projects_card_animation">PROJECT CARD ANIMATION</label><br>
-                <input type="text" id="form_section_projects_card_animation" name="form_section_projects_card_animation" size="80">
+                <label for="form_section_projects_card_animation">PROJECT CARD ANIMATION</label>
+                <input type="text" id="form_section_projects_card_animation" name="form_section_projects_card_animation">
                 
                 <br><br>
                 <input type="button" id="form_section_projects_button_add_project" value="Add Project">
@@ -220,9 +274,9 @@
             </details>
             
             <br><br>
-            <input type="submit" value="Submit">
+            <input type="button" value="Submit">
 
-        </form> 
+        <!-- </form>  -->
     </body>
 
     <!-- ''''''''''''''''''''''''''''''''''''''''''''' -->
