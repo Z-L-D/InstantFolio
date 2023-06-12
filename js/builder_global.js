@@ -1,7 +1,7 @@
-const builder_form = document.getElementById('builder_form');
+const form_button_submit = document.getElementById('form_button_submit');
 
 // function form_submit(){
-    builder_form.addEventListener('submit', function(event){
+    form_button_submit.addEventListener('submit', function(event){
         // event.preventDefault();
     
         site_definition.header.title = form_header_title_text.value;
