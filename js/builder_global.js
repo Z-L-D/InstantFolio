@@ -1,7 +1,7 @@
 const form_button_submit = document.getElementById('form_button_submit');
 
 // function form_submit(){
-    form_button_submit.addEventListener('submit', function(event){
+    form_button_submit.addEventListener('click', function(event){
         // event.preventDefault();
     
         site_definition.header.title = form_header_title_text.value;
@@ -22,15 +22,15 @@ const form_button_submit = document.getElementById('form_button_submit');
 
         site_definition.contact.include = contact_elements_include.value;   
         
-        define_page_template(`const site_definition = ${JSON.stringify(site_definition)}`)
+        // define_page_template(`const site_definition = ${JSON.stringify(site_definition)}`)
 
-        let file_builder = page_template;
+        let file_builder = `const site_definition = ${JSON.stringify(site_definition)}`;
 
         let file_builder_blob = new Blob([file_builder], { type: "text/plain" });
         let downloadLink = document.createElement("a");
         
         downloadLink.href = URL.createObjectURL(file_builder_blob);
-        downloadLink.download = "content.html";
+        downloadLink.download = "content.js";
         downloadLink.click();
     });
 // }
