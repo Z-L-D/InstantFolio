@@ -1,9 +1,4 @@
-const blog = site_settings.site_blog;
-const downloads = site_settings.site_downloads;
-
-const tag_animation = site_settings.site_tag_animation;
-const tag_animation_color = site_settings.site_tag_animation_color;
-const tag_animation_opacity = site_settings.site_tag_animation_opacity;
+const tag_animation = site_definition.work;
 
 const section_landing = document.getElementById('section_landing');
 const section_about = document.getElementById('section_about');
@@ -13,12 +8,10 @@ const section_contact = document.getElementById('section_contact');
 
 function load_settings()
 {
-    if(site_settings.site_title != undefined){
-        document.getElementById("site_title").innerHTML = site_settings.site_title;
-    }
+    document.getElementById("site_title").innerHTML = site_definition.header.title;
 
-    document.getElementById('tab_work').innerHTML = header_work.toLocaleUpperCase();
-    document.getElementById('work_header').innerHTML = header_work.toLocaleUpperCase();
+    document.getElementById('tab_work').innerHTML = site_definition.work.title.toLocaleUpperCase();  // !!!!!!!!!!!!!!!!!!!!!
+    document.getElementById('work_header').innerHTML = site_definition.work.title.toLocaleUpperCase(); // !!!!!!!!!!!!!!!!!!!!!
 }
 
 function base64Encode(input) {

@@ -1,21 +1,22 @@
 function load_modal(post_number)
 {
-    console.log("post number: " + post_number)
+    let current_post = site_definition.work.posts[post_number];
+
     document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
-            ${post_array[post_number].post_title}
+            ${current_post.title}
             <br>
-            ${post_array[post_number].post_description}
+            ${current_post.description}
     `);
-    if(post_array[post_number].post_subtype.length > 0){
+    if(current_post.subtype.length > 0){
         document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
             <br>
-            ${post_array[post_number].post_type} > ${post_array[post_number].post_subtype}
+            ${current_post.type} > ${current_post.subtype}
         `);
     }
     else{
         document.getElementById("post_modal_box").insertAdjacentHTML('beforeend', `
             <br>
-            ${post_array[post_number].post_type}
+            ${current_post.type}
         `);
     };
     document.getElementById("post_modal").classList.add("modal_show");

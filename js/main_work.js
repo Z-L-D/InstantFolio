@@ -2,21 +2,23 @@ function load_work(){
     let post_types = ['All'];
     let post_file;
 
-    for(let i = 0; i < post_array.length; i++){
+    for(let i = 0; i < site_definition.work.posts.length; i++){
+        let current_post = site_definition.work.posts[i]
+
         //load tags
-        if(post_types.includes(post_array[i].post_type) === false){
-            post_types.push(post_array[i].post_type);
+        if(post_types.includes(current_post.type) === false){
+            post_types.push(current_post.type);
         };
 
         //load posts
-        post_file = post_array[i].post_title.replace(/ /g, "_");
+        post_file = current_post.title.replace(/ /g, "_");
         document.getElementById("posts").insertAdjacentHTML('beforeend', `
-                <a class="item post ${post_array[i].post_type} ${post_array[i].post_subtype}" data="${post_file}" index="${i}" type="${post_array[i].post_type}" subtype="${post_array[i].post_subtype}">
+                <a class="item post ${current_post.type} ${current_post.subtype}" data="${post_file}" index="${i}" type="${current_post.type}" subtype="${current_post.subtype}">
                     <div class="card">
-                        <div class="card_background" style="background-image: url('img/${post_array[i].post_type}/${post_array[i].post_title}/${post_array[i].post_title}--th.jpg')"></div>
+                        <div class="card_background" style="background-image: url('img/${current_post.type}/${current_post.title}/${current_post.title}--th.jpg')"></div>
                         <div class="text">
-                            <div class="card_title">${post_array[i].post_title}</div>
-                            <div class="description"><p class="text">${post_array[i].post_description}<br>${post_array[i].post_type}</p></div>
+                            <div class="card_title">${current_post.title}</div>
+                            <div class="description"><p class="text">${current_post.description}<br>${current_post.type}</p></div>
                         </div>
                     </div>
                 </a>
@@ -65,11 +67,13 @@ function load_subtags(tag){
     else{
         post_subtypes = ['All'];
 
-        for(let i = 0; i < post_array.length; i++){
-            if(post_array[i].post_type === tag){
-                if(post_subtypes.includes(post_array[i].post_subtype) === false){
-                    if(post_array[i].post_subtype != ""){
-                        post_subtypes.push(post_array[i].post_subtype);
+        for(let i = 0; i < site_definition.work.posts.length; i++){
+            let current_post = site_definition.work.posts[i]
+
+            if(current_post.type === tag){
+                if(post_subtypes.includes(current_post.subtype) === false){
+                    if(current_post.subtype != ""){
+                        post_subtypes.push(current_post.subtype);
                     };
                 };
             };

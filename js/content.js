@@ -38,60 +38,81 @@ This website is a window into my world, showcasing my projects, my thoughts on t
                 sharing:"",
             },
             {
-                post_type:"tag2",
-                post_subtype:"",
-                post_title:"Blog 1",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Blog 1",
+                type:"tag2",
+                subtype:"",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
-                post_type:"tag2",
-                post_subtype:"",
-                post_title:"Blog 2",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Blog 2",
+                type:"tag2",
+                subtype:"",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
-                post_type:"tag3",
-                post_subtype:"tag3_subtag1",
-                post_title:"Classical Music Playlist",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Classical Music Playlist",
+                type:"tag3",
+                subtype:"tag3_subtag1",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
-                post_type:"blog1",
-                post_subtype:"",
-                post_title:"Blog 3",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Blog 3",
+                type:"blog1",
+                subtype:"",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
-                post_type:"blog2",
-                post_subtype:"tech",
-                post_title:"Blog 4",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Blog 4",
+                type:"blog2",
+                subtype:"tech",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
-                post_type:"blog2",
-                post_subtype:"tech",
-                post_title:"Blog 5",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Blog 5",
+                type:"blog2",
+                subtype:"tech",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
             {
-                post_type:"blog2",
-                post_subtype:"science",
-                post_title:"Blog 6",
-                post_description:"",
-                post_date:"",
-                post_image:""
+                title:"Blog 6",
+                type:"blog2",
+                subtype:"science",
+                description:"",
+                content:"",
+                date:"",
+                image:"",
+                license:"",
+                sharing:"",
             },
         ]
     },
@@ -123,9 +144,9 @@ This website is a window into my world, showcasing my projects, my thoughts on t
         stackoverflow:"[STACKOVERFLOW]",
         steam:"[STEAM]",
         tiktok:"[TIKTOK]",
+        tumblr:"[TUMBLR]",
         twitch:"[TWITCH]",
         twitter:"[TWITTER]",
-        tumblr:"[TUMBLR]",
         turbosquid:"[TURBOSQUID]",
         unity:"[UNITY]",
         unreal:"[UNREAL]",
@@ -134,135 +155,6 @@ This website is a window into my world, showcasing my projects, my thoughts on t
         youtube:"[YOUTUBE]"
     }
 }
-
-var site_settings = {   
-    site_title:"InstantFolio",
-    topbar_title:"InstantFolio",
-    site_subtitle:"",
-    site_description:"",
-    site_section_about:true,
-    site_section_work:true,
-    site_section_contact:true,
-    site_contact_email: "Email Push", // ["Email Push"]
-    site_contact_socialmedia:
-        {
-           bandcamp:"a",
-           codepen:"a",
-           deviantart:"a",
-           discord:"a",
-           dribbble:"a",
-           ello:"a",
-           envato:"[ENVATO]",
-           facebook:"a",
-           flickr:"a",
-           github:"a",
-           hackadayio:"a",
-           instagram:"a",
-           lastfm:"a",
-           linkedin:"a",
-           pinterest:"a",
-           reddit:"a",
-           reverbnation:"a",
-           sketchfab:"[SKETCHFAB]",
-           snapchat:"a",
-           sourceforge:"a",
-           soundcloud:"a",
-           spacehey:"a",
-           stackoverflow:"a",
-           steam:"a",
-           tiktok:"a",
-           twitch:"a",
-           twitter:"a",
-           tumblr:"a",
-           vimeo:"a",
-           wikipedia:"a",
-           youtube:"a"
-        },
-    site_tag_animation:"pullUpDown",
-    site_blog:false,
-    site_downloads:false,
-};
-
-const content_landing = "";
-
-const content_about = [`Hello! I'm [NAME], a software engineer based in [CITY]. Since graduating from [COLLEGE/UNIVERSITY] in [YEAR], I've been passionate about leveraging technology to solve complex problems.
-
-In my current role at [CURRENT JOB], I develop user-friendly software solutions, helping businesses improve their efficiency and drive innovation. I'm skilled in several programming languages, including Python, Java, and C++.
-
-Outside of work, I'm an avid reader and tech enthusiast who loves exploring the latest industry trends. I also enjoy hiking and spending quality time with my family and my dog, Luna.
-
-This website is a window into my world, showcasing my projects, my thoughts on tech trends, and some snippets of my personal life. Feel free to explore and reach out if you'd like to connect!
-`];
-
-const header_work = "work";
-
-const post_array = [
-    {
-        post_type:"tag1",
-        post_subtype:"tag1_subtag1",
-        post_title:"Electronic Music Playlist",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"tag2",
-        post_subtype:"",
-        post_title:"Blog 1",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"tag2",
-        post_subtype:"",
-        post_title:"Blog 2",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"tag3",
-        post_subtype:"tag3_subtag1",
-        post_title:"Classical Music Playlist",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"blog1",
-        post_subtype:"",
-        post_title:"Blog 3",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"blog2",
-        post_subtype:"tech",
-        post_title:"Blog 4",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"blog2",
-        post_subtype:"tech",
-        post_title:"Blog 5",
-        post_description:"",
-        post_date:"",
-        post_image:""
-    },
-    {
-        post_type:"blog2",
-        post_subtype:"science",
-        post_title:"Blog 6",
-        post_description:"",
-        post_date:"",
-        post_image:"",
-        post_license:"",
-    },
-];
 
 //TEMPALTE rev 2
 // var post_## = {post_type:"visuals, audio, science, blog, downloads",
