@@ -16,6 +16,18 @@ function contact_section(websiteid, websitename, userlink, symbol, viewbox)
     }
 }
 
+function base64Decode(input) {
+    // Input is string
+    if (typeof input !== 'string') {
+        throw new Error('Input must be a string');
+    }
+
+    // Perform base64 decoding
+    let decodedString = atob(input);
+
+    return decodedString;
+}
+
 function load_contact(){
     if(site_definition.contact.include === true){   
         if(site_definition.contact.email_hash === ""){
@@ -32,15 +44,9 @@ function load_contact(){
             const email_form_email = document.getElementById('contact_content_email_form_email').value;
             const email_form_message = document.getElementById('contact_content_email_form_message').value;
             const email_form_subject = `Enquiry from ${email_form_name}`
-            const email_form_emailto = "test@test.com" //define this in settings !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            const email_form_emailto = base64Decode(site_definition.contact.email_hash);
     
-            const email_encrypt = base64Encode(email_form_emailto);
-            const email_decrypt = base64Decode(email_encrypt);
-    
-            console.log(email_encrypt);
-            console.log(email_decrypt);
-    
-            // window.open(`mailto:${email_form_emailto}?subject=${email_form_subject}&body=Name: ${email_form_name}%0D%0AEmail: ${email_form_email}%0D%0A%0D%0A${email_form_message}`);
+            window.open(`mailto:${email_form_emailto}?subject=${email_form_subject}&body=Name: ${email_form_name}%0D%0AEmail: ${email_form_email}%0D%0A%0D%0A${email_form_message}`);
         });
 
         const social_media_list = [ {id:"artstation",       name:"Artstation",      userlink:"",                                                sharelink:"",       symbol:""},

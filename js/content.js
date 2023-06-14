@@ -118,7 +118,7 @@ This website is a window into my world, showcasing my projects, my thoughts on t
     },
     contact:{
         include:true,
-        email_hash:"[EMAIL HASH]",
+        email_hash:"dGVzdEB0ZXN0LmNvbQ==",
         artstation:"[ARTSTATION]",
         bandcamp:"[BANDCAMP]",
         codepen:"[CODEPEN",

@@ -14,29 +14,29 @@ function load_settings()
     document.getElementById('work_header').innerHTML = site_definition.work.title.toLocaleUpperCase(); // !!!!!!!!!!!!!!!!!!!!!
 }
 
-function base64Encode(input) {
-    // Ensure input is a string
-    if (typeof input !== 'string') {
-        throw new Error('Input must be a string');
-    }
+// function base64Encode(input) {
+//     // Ensure input is a string
+//     if (typeof input !== 'string') {
+//         throw new Error('Input must be a string');
+//     }
 
-    // Perform base64 encoding
-    let encodedString = btoa(input);
+//     // Perform base64 encoding
+//     let encodedString = btoa(input);
 
-    return encodedString;
-}
+//     return encodedString;
+// }
 
-function base64Decode(input) {
-    // Ensure input is a string
-    if (typeof input !== 'string') {
-        throw new Error('Input must be a string');
-    }
+// function base64Decode(input) {
+//     // Ensure input is a string
+//     if (typeof input !== 'string') {
+//         throw new Error('Input must be a string');
+//     }
 
-    // Perform base64 decoding
-    let decodedString = atob(input);
+//     // Perform base64 decoding
+//     let decodedString = atob(input);
 
-    return decodedString;
-}
+//     return decodedString;
+// }
 
 
 
