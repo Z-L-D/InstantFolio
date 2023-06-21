@@ -7,13 +7,13 @@ function work_load(){
         check_include(work_elements_include, form_section_work);
     });
 
-    var work
+    var post_cards = document.getElementById('post_cards');
 
     for(i = 0; i < site_definition.work.posts.length; i++){
-        work += work_collation(i);
-    }
+        var post = work_collation(i);
 
-    document.getElementById('post_cards').innerHTML = work;
+        post_cards.insertAdjacentHTML('beforeend', post);
+    }
 }
 
 function work_collation(post_number){
