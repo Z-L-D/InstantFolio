@@ -14,6 +14,14 @@ function work_load(){
 
         post_cards.insertAdjacentHTML('beforeend', post);
     }
+
+    let posts = document.querySelectorAll('.post')
+
+    for(let i = 0; i < posts.length; i++){
+        posts[i].addEventListener('click', function(){
+            alert("clicked " + i);
+        });
+    };
 }
 
 function work_collation(post_number){
